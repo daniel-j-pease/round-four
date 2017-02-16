@@ -1,52 +1,94 @@
 * {
   margin: 0;
   padding: 0;
+  font-size: 16px;
 }
 
 #hamburger {
   height: 10vh;
-  width: 10vw;
   position: fixed;
-  right: 0;
   margin-right: 3vw;
   margin-top: 3vh;
+  right: 0;
+  width: 10vw;
   z-index: 1;
 
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 #hamburger > span {
   align-self: center;
+  background-color: #F8B195;
   display: block;
+  height: 4px;
   margin-bottom: 7px;
   text-align: center;
-  height: 4px;
   width: 30px;
-  background-color: #F8B195;
 }
 
 nav {
+  background-color: #F8B195;
+  color: #355C7D;
+  margin-right: 5vw;
+  margin-top: 11vh;
   max-height: 0;
-  transition: max-height 0.5s ease-out 0s;
   overflow: hidden;
   position: fixed;
   right: 0;
-  margin-right: 5vw;
-  margin-top: 11vh;
-  background-color: #F8B195;
-  color: #355C7D;
+  transition: max-height 0.5s ease-out 0s;
 }
 
 nav > div {
-  line-height: 35px;
-  text-align: center;
   font-size: 1em;
+  line-height: 35px;
   outline: 1px solid #6C5B7B;
   outline-offset: -1px;
+  text-align: center;
   width: 20vw;
+}
+
+.name {
+  position: absolute;
+  font-size: 4.236em;
+  line-height: 15vh;
+  font-family: 'Expletus Sans', cursive;
+}
+
+#first {
+  top:35vh;
+  right: 10vw;
+}
+
+#last {
+  top:45vh;
+  left: 10vw;
+}
+
+#title {
+  font-size: 1.333em;
+  text-align: center;
+  top: 60vh;
+  position: absolute;
+  width: 100vw;
+}
+
+.bar {
+  background-color: #F67280;
+  height: 1vh;
+  position: absolute;
+  width: 30vh;
+}
+
+#bar-one {
+  top: 41.5vh;
+  left: 10vw;
+}
+
+#bar-two {
+  top: 51.5vh;
 }
 
 .reveal {
@@ -83,37 +125,50 @@ nav > div {
 
 h1 {
   color: #F8B195;
-  position: absolute;
-  font-size: 2.618em;
   font-family: 'Expletus Sans', cursive;
+  font-size: 2.618em;
+  position: absolute;
+}
+
+#headshot {
+  background-color: red;
+  height: 419px;
+  position: absolute;
+  width: 310px;
+}
+
+#bio {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+  position: absolute;
 }
 
 #contact-title {
-  position: absolute;
-  top: 315vh;
-  display: block;
-  width: 100vw;
-  text-align: center;
-  font-family: 'Raleway', sans-serif;
   color: #6C5B7B;
+  display: block;
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+  text-align: center;
+  top: 315vh;
+  width: 100vw;
 }
 
 input,
 textarea {
   display: block;
-  position: absolute;
   border: none;
   border-radius: 10px;
-  font-size: 1em;
   font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+  position: absolute;
 }
 
-#contact-name,
-#contact-email {
-  top: 330vh;
-  width: 30vw;
+#contact-email,
+#contact-name {
   line-height: 5vh;
   text-align: center;
+  top: 330vh;
+  width: 30vw;
 }
 
 #contact-name {
@@ -125,50 +180,50 @@ textarea {
 }
 
 #contact-message {
-  left: 10vw;
   height: 15vh;
+  left: 10vw;
+  padding: 2.5vw;
   top: 340vh;
   width: 75vw;
-  padding: 2.5vw;
 }
 
 #contact-send {
-  top: 360vh;
-  width: 15vw;
-  line-height: 5vh;
-  left: 42.5vw;
   background-color: #355C7D;
   color: #F8B195;
+  left: 42.5vw;
+  line-height: 5vh;
+  top: 360vh;
+  width: 15vw;
 }
 
 footer {
-  width: 100vw;
-  height: 30vh;
   background-color: #355C7D;
+  height: 30vh;
+  width: 100vw;
 }
 
 .social {
   /*the position of the top of the icon is equal to half the footer's top position minus half the height of the icon*/
-  top: calc(385vh - 40px);
-  position: absolute;
   background-color: #355C7D;
-  height: 80px;
-  width: 80px;
   background-size: 100% 100%;
   border-radius: 50px;
+  height: 80px;
+  top: calc(385vh - 40px);
+  position: absolute;
+  width: 80px;
 }
 
 #linkedin {
-  left: 8vw;
   background-image: url('../assets/linkedin.png');
+  left: 8vw;
 }
 
 #github {
-  left: calc(50vw - 40px);
   background-image: url('../assets/github.png');
+  left: calc(50vw - 40px);
 }
 
 #twitter {
-  right: 8vw;
   background-image: url('../assets/twitter.png');
+  right: 8vw;
 }

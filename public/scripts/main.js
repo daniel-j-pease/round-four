@@ -7,11 +7,17 @@ window.onload = () => {
   const nav = document.querySelector("nav");
   const viewHeight = window.innerHeight;
   const body = document.querySelector("body");
-
+  const barOne = document.querySelector("#bar-one");
+  const barTwo = document.querySelector("#bar-two");
+  const barThree = document.querySelector("#bar-three");
   const homeHeight = 0;
   const aboutHeight = viewHeight;
   const projectsHeight = viewHeight * 2;
   const contactHeight = viewHeight * 3;
+
+  // barOne.style.display = "block";
+  // barTwo.style.display = "block";
+  // barThree.style.display = "block";
 
   function handleHamburgerClick() {
     nav.style.display = "block";
@@ -69,8 +75,20 @@ window.onload = () => {
     );
   }
 
+  function moveBars() {
+    // barOne.style.top = `${firstBarTop}px`;
+    // barOne.style.left = `${firstBarLeft + 10}px`;
+    // barOne.style.width = `${posFirstLeft - firstBarLeft - 15}px`;
+    //
+    // barTwo.style.top = `${lastBarTop}px`;
+    // barTwo.style.width = `${posFirstRight - posLastRight - 20}px`;
+    // barTwo.style.left = `${posFirstRight - barTwo.offsetWidth - 10}px`;
+  }
+
   hamburger.addEventListener("click", handleHamburgerClick);
   nav.addEventListener("click", handleNavClick);
   body.addEventListener("click", hideNav);
   window.addEventListener("scroll", checkHamburger);
+
+  moveBars();
 };
