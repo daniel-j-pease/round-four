@@ -1,0 +1,19 @@
+{
+  "name": "round-four",
+  "version": "1.0.0",
+  "description": "personal site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniel-j-pease/round-four.git"
+  },
+  "author": "Daniel Pease",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/daniel-j-pease/round-four/issues"
+  },
+  "homepage": "https://github.com/daniel-j-pease/round-four#readme"
+}

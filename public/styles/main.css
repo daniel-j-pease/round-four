@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#hamburger {
+  height: 10vh;
+  width: 10vw;
+  position: fixed;
+  right: 0;
+  margin-right: 3vw;
+  margin-top: 3vh;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#hamburger > span {
+  align-self: center;
+  display: block;
+  margin-bottom: 7px;
+  text-align: center;
+  height: 4px;
+  width: 30px;
+  background-color: #F8B195;
+}
+
+nav {
+  max-height: 0;
+  transition: max-height 0.5s ease-out 0s;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  margin-right: 5vw;
+  margin-top: 11vh;
+  background-color: #F8B195;
+  color: #355C7D;
+}
+
+nav > div {
+  line-height: 35px;
+  text-align: center;
+  font-size: 1em;
+  outline: 1px solid #6C5B7B;
+  outline-offset: -1px;
+  width: 20vw;
+}
+
+.reveal {
+  max-height: 500px;
+  transition: max-height 0.5s ease-out 0s;
+}
+
+#about,
+#portfolio,
+#welcome {
+  height: 100vh;
+  width: 100vw;
+}
+
+#contact {
+  height: 70vh;
+}
+
+#about {
+  background-color: palegoldenrod;
+}
+
+#welcome {
+  background-color: lightblue;
+}
+
+#portfolio {
+  background-color: plum;
+}
+
+#contact {
+  background-color: darksalmon;
+}
+
+h1 {
+  color: #F8B195;
+  position: absolute;
+  font-size: 2.618em;
+  font-family: 'Expletus Sans', cursive;
+}
+
+#contact-title {
+  position: absolute;
+  top: 315vh;
+  display: block;
+  width: 100vw;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  color: #6C5B7B;
+}
+
+input,
+textarea {
+  display: block;
+  position: absolute;
+  border: none;
+  border-radius: 10px;
+  font-size: 1em;
+  font-family: 'Raleway', sans-serif;
+}
+
+#contact-name,
+#contact-email {
+  top: 330vh;
+  width: 30vw;
+  line-height: 5vh;
+  text-align: center;
+}
+
+#contact-name {
+  left: 15vw;
+}
+
+#contact-email {
+  left: 55vw;
+}
+
+#contact-message {
+  left: 10vw;
+  height: 15vh;
+  top: 340vh;
+  width: 75vw;
+  padding: 2.5vw;
+}
+
+#contact-send {
+  top: 360vh;
+  width: 15vw;
+  line-height: 5vh;
+  left: 42.5vw;
+  background-color: #355C7D;
+  color: #F8B195;
+}
+
+footer {
+  width: 100vw;
+  height: 30vh;
+  background-color: #355C7D;
+}
+
+.social {
+  /*the position of the top of the icon is equal to half the footer's top position minus half the height of the icon*/
+  top: calc(385vh - 40px);
+  position: absolute;
+  background-color: #355C7D;
+  height: 80px;
+  width: 80px;
+  background-size: 100% 100%;
+  border-radius: 50px;
+}
+
+#linkedin {
+  left: 8vw;
+  background-image: url('../assets/linkedin.png');
+}
+
+#github {
+  left: calc(50vw - 40px);
+  background-image: url('../assets/github.png');
+}
+
+#twitter {
+  right: 8vw;
+  background-image: url('../assets/twitter.png');
+}
