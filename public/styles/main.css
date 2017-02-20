@@ -89,6 +89,7 @@ nav > div {
 
 #bar-two {
   top: 51.5vh;
+  right: 10vw;
 }
 
 .reveal {
@@ -127,12 +128,16 @@ h1 {
   color: #F8B195;
   font-family: 'Expletus Sans', cursive;
   font-size: 2.618em;
+  text-align: center;
   position: absolute;
+  width: 100vw;
 }
 
 #headshot {
   background-color: red;
-  height: 419px;
+  height: 350px;
+  left: calc(50vw - 155px);
+  top: 113vh;
   position: absolute;
   width: 310px;
 }
