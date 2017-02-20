@@ -15,10 +15,6 @@ window.onload = () => {
   const projectsHeight = viewHeight * 2;
   const contactHeight = viewHeight * 3;
 
-  // barOne.style.display = "block";
-  // barTwo.style.display = "block";
-  // barThree.style.display = "block";
-
   function handleHamburgerClick() {
     nav.style.display = "block";
     nav.className = "reveal";
@@ -34,16 +30,20 @@ window.onload = () => {
   }
 
   function handleNavClick(e) {
-    // call scrollTo on the intended position
-    if (e.target.innerText === "Home") {
-      scrollTo(homeHeight, 300);
-    } else if (e.target.innerText === "About") {
-      scrollTo(aboutHeight, 300);
-    } else if (e.target.innerText === "Projects") {
-      scrollTo(projectsHeight, 300);
-    } else if (e.target.innerText === "Contact") {
-      scrollTo(contactHeight, 300);
-    }
+    switch (e.target.innerText) {
+      case "Home":
+        scrollTo(homeHeight, 300);
+        break;
+      case "About":
+        scrollTo(aboutHeight, 300);
+        break;
+      case "Projects":
+        scrollTo(projectsHeight, 300);
+        break;
+      case "Contact":
+        scrollTo(contactHeight, 300);
+        break;
+    };
   };
 
   function checkHamburger() {
@@ -76,19 +76,17 @@ window.onload = () => {
   }
 
   function moveBars() {
-    // barOne.style.top = `${firstBarTop}px`;
-    // barOne.style.left = `${firstBarLeft + 10}px`;
-    // barOne.style.width = `${posFirstLeft - firstBarLeft - 15}px`;
-    //
-    // barTwo.style.top = `${lastBarTop}px`;
-    // barTwo.style.width = `${posFirstRight - posLastRight - 20}px`;
-    // barTwo.style.left = `${posFirstRight - barTwo.offsetWidth - 10}px`;
+    let widthOne = first.getBoundingClientRect().left - (window.innerWidth / 10);
+    let widthTwo = window.innerWidth - (window.innerWidth / 10) - last.getBoundingClientRect().right;
+    barOne.style.width = `${widthOne}px`;
+    barTwo.style.width = `${widthTwo}px`;
   }
 
   hamburger.addEventListener("click", handleHamburgerClick);
   nav.addEventListener("click", handleNavClick);
   body.addEventListener("click", hideNav);
   window.addEventListener("scroll", checkHamburger);
+  window.addEventListener("resize", moveBars);
 
   moveBars();
 };
