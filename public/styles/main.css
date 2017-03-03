@@ -79,7 +79,7 @@ nav > div {
   background-color: #F67280;
   height: 1vh;
   position: absolute;
-  width: 30vh;
+  width: 50vw;
 }
 
 #bar-one {
@@ -92,7 +92,13 @@ nav > div {
   right: 10vw;
 }
 
-.reveal {
+#bar-three {
+	top: 65vh;
+	width 30vw;
+	left: 25vw;
+}
+
+.navDrop {
   max-height: 500px;
   transition: max-height 0.5s ease-out 0s;
 }
@@ -129,20 +135,30 @@ h1 {
   font-family: 'Expletus Sans', cursive;
   font-size: 2.618em;
   text-align: center;
-  position: absolute;
+  position: relative;
   width: 100vw;
+  margin: 0;
 }
 
 #aboutMe-header {
-  top: 115vh;
+  top: 11vh;
 }
 
 #bio {
   font-family: 'Raleway', sans-serif;
   font-size: 1em;
-  position: absolute;
-  top: 135vh;
+  position: relative;
+  top: 23vh;
   margin: 7vw;
+}
+
+#mobile-clue {
+  color: red;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  position: relative;
+  text-align: center;
+  width: 100vw;
 }
 
 #contact-title {
@@ -153,6 +169,37 @@ h1 {
   text-align: center;
   top: 315vh;
   width: 100vw;
+}
+
+.project-container {
+  height: 20vh;
+	margin-bottom: 7vh;
+}
+
+.project-image {
+	width: 75vw;
+  position: absolute;
+  height: 20vh;
+	background-color: red;
+  /*margin-left: 6vw;*/
+	margin:  12.5vw;
+}
+
+.project-list {
+	list-style-type: georgian;
+	margin: 10vh 5vw 0vw 10vw;
+	color: red;
+	position: absolute;
+	top: 200vh;
+}
+
+.tempHide {
+	display: none
+}
+
+.showList {
+	opacity: 1;
+	transition: opacity 0.5s ease-in 0s;
 }
 
 input,
