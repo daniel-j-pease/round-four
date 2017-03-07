@@ -14,15 +14,16 @@ window.onload = () => {
   const aboutHeight = viewHeight;
   const projectsHeight = viewHeight * 2;
   const contactHeight = viewHeight * 3;
+	const projectOne = document.querySelector('#project-one-container')
 
   function handleHamburgerClick() {
     nav.style.display = "block";
-    nav.className = "reveal";
+    nav.className = "navDrop";
   }
 
   function hideNav(e) {
     if (e.target !== hamburger && e.srcElement.nodeName !== "SPAN") {
-      nav.className = ""
+      nav.className = "";
     }
     if (e.target.className === "not") {
       nav.className = "";
@@ -75,9 +76,14 @@ window.onload = () => {
     );
   }
 
+	function handleProjectClick(e) {
+		console.log(e.target.parentElement.childNodes[3])
+		
+	}
+
   function moveBars() {
-    let widthOne = first.getBoundingClientRect().left - (window.innerWidth / 10);
-    let widthTwo = window.innerWidth - (window.innerWidth / 10) - last.getBoundingClientRect().right;
+    let widthOne = first.getBoundingClientRect().left - (window.innerWidth / 7);
+    let widthTwo = window.innerWidth - (window.innerWidth / 7) - last.getBoundingClientRect().right;
     barOne.style.width = `${widthOne}px`;
     barTwo.style.width = `${widthTwo}px`;
   }
@@ -87,6 +93,7 @@ window.onload = () => {
   body.addEventListener("click", hideNav);
   window.addEventListener("scroll", checkHamburger);
   window.addEventListener("resize", moveBars);
+	projectOne.addEventListener("click", handleProjectClick)
 
   moveBars();
 };
