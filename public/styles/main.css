@@ -193,6 +193,25 @@ h1 {
 	top: 200vh;
 }
 
+#project-info {
+	position: absolute;
+	top: 212vh;
+	height: 80vh;
+	width: 80vw;
+	background-color: green;
+	left: 10vw;
+}
+
+.info-button {
+	margin-bottom: 3vh;
+	width: 65vw;
+	height: 10vw;
+	background-color: red;
+	position: relative;
+	top: 60vh;
+	left: 7.5vw;
+}
+
 .tempHide {
 	display: none
 }
