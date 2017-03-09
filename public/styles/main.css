@@ -181,25 +181,40 @@ h1 {
   position: absolute;
   height: 20vh;
 	background-color: red;
-  /*margin-left: 6vw;*/
 	margin:  12.5vw;
 }
 
 .project-list {
 	list-style-type: georgian;
-	margin: 10vh 5vw 0vw 10vw;
+	margin: 15vh 5vw 0vw 10vw;
 	color: red;
 	position: absolute;
-	top: 200vh;
+}
+
+.project-list > li {
+	font-size: 1.25em;
+	margin: 2vh 0 2vh 0;
 }
 
 #project-info {
-	position: absolute;
-	top: 212vh;
-	height: 80vh;
+	position: fixed;
+  top: 15vh;
+  left: 10vw;
+	height: 75vh;
 	width: 80vw;
 	background-color: green;
-	left: 10vw;
+  z-index: 1;
+}
+
+#project-close {
+	position: absolute;
+	font-size: 1.618em;
+	line-height: 8vh;
+	left: calc(80vw - 8vh);
+	width: 8vh;
+	color: white;
+	background-color: black;
+	text-align: center;
 }
 
 .info-button {
@@ -212,13 +227,22 @@ h1 {
 	left: 7.5vw;
 }
 
-.tempHide {
-	display: none
+.hidden {
+  opacity: 0;
+  /*display: none;*/
+  transition: opacity 2s ease-in;
+  -ms-transition: opacity 2s ease-in;
+  -moz-transition: opacity 2s ease-in;
+  -webkit-transition: opacity 2s ease-in;
 }
 
-.showList {
+.showInfo {
+  display: fixed;
 	opacity: 1;
-	transition: opacity 0.5s ease-in 0s;
+  transition: opacity 2s ease-in;
+  -ms-transition: opacity 2s ease-in;
+  -moz-transition: opacity 2s ease-in;
+  -webkit-transition: opacity 2s ease-in;
 }
 
 input,
