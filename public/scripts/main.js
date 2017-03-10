@@ -84,6 +84,10 @@ window.onload = () => {
   }
 
   function handleProjectClick(e) {
+    projectOne.setAttribute('class', 'project-container hidden')
+    projectTwo.setAttribute('class', 'project-container hidden')
+    projectThree.setAttribute('class', 'project-container hidden')
+    console.log(e.target.parentElement, projectOne)
     if (e.target.attributes[0].nodeValue == `project-one-image`) {
       console.log('clicked')
       projectInfo.setAttribute('class', 'showInfo');
@@ -102,6 +106,9 @@ window.onload = () => {
     projectOneList.setAttribute('class', 'project-list hidden');
     projectTwoList.setAttribute('class', 'project-list hidden');
     projectThreeList.setAttribute('class', 'project-list hidden');
+    projectOne.setAttribute('class', 'project-container')
+    projectTwo.setAttribute('class', 'project-container')
+    projectThree.setAttribute('class', 'project-container')
   }
 
   function moveBars() {

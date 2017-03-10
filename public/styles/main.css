@@ -182,6 +182,7 @@ h1 {
   height: 20vh;
 	background-color: red;
 	margin:  12.5vw;
+  z-index: 1;
 }
 
 .project-list {
@@ -203,7 +204,7 @@ h1 {
 	height: 75vh;
 	width: 80vw;
 	background-color: green;
-  z-index: 1;
+  /*z-index: 1;*/
 }
 
 #project-close {
