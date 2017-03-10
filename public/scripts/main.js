@@ -25,7 +25,7 @@ window.onload = () => {
 
   function handleHamburgerClick() {
     nav.style.display = 'block';
-    nav.className = 'navDrop';
+    nav.className = 'showNav';
   }
 
   function hideNav(e) {
@@ -84,19 +84,21 @@ window.onload = () => {
   }
 
   function handleProjectClick(e) {
+
+    //hide all project containers
     projectOne.setAttribute('class', 'project-container hidden')
     projectTwo.setAttribute('class', 'project-container hidden')
     projectThree.setAttribute('class', 'project-container hidden')
-    console.log(e.target.parentElement, projectOne)
+
     if (e.target.attributes[0].nodeValue == `project-one-image`) {
       console.log('clicked')
       projectInfo.setAttribute('class', 'showInfo');
       projectOneList.setAttribute('class', 'project-list');
     } else if (e.target.attributes[0].nodeValue == `project-two-image`) {
-      projectInfo.setAttribute('class', '');
+      projectInfo.setAttribute('class', 'showInfo');
       projectTwoList.setAttribute('class', 'project-list');
     } else if (e.target.attributes[0].nodeValue == `project-three-image`) {
-      projectInfo.setAttribute('class', '');
+      projectInfo.setAttribute('class', 'showInfo');
       projectThreeList.setAttribute('class', 'project-list');
     }
   }
@@ -120,10 +122,6 @@ window.onload = () => {
     barTwo.style.width = `${widthTwo}px`;
   }
 
-  function checkInfoDiv() {
-    console.log('info clicked')
-  }
-
   hamburger.addEventListener('click', handleHamburgerClick);
   nav.addEventListener('click', handleNavClick);
   body.addEventListener('click', hideNav);
@@ -133,8 +131,6 @@ window.onload = () => {
   projectTwo.addEventListener('click', handleProjectClick);
   projectThree.addEventListener('click', handleProjectClick);
   projectClose.addEventListener('click', handleProjectClose);
-
-  projectInfo.addEventListener('click', checkInfoDiv)
 
   moveBars();
 };
