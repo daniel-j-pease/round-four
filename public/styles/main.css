@@ -262,6 +262,12 @@ textarea {
   font-family: 'Raleway', sans-serif;
   font-size: 1em;
   position: absolute;
+
+  opacity: 1;
+  transition: opacity 2s ease-in;
+  -ms-transition: opacity 2s ease-in;
+  -moz-transition: opacity 2s ease-in;
+  -webkit-transition: opacity 2s ease-in;
 }
 
 #contact-email,

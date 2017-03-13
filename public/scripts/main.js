@@ -22,6 +22,11 @@ window.onload = () => {
   const projectThreeList = document.querySelector('#project-three-list');
   const projectClose = document.querySelector('#project-close');
   const projectInfo = document.querySelector('#project-info');
+  const contactTitle = document.querySelector('#contact-title');
+  const contactName = document.querySelector('#contact-name');
+  const contactEmail = document.querySelector('#contact-email');
+  const contactMessage = document.querySelector('#contact-message');
+  const contactSend = document.querySelector('#contact-send');
 
   function handleHamburgerClick() {
     nav.style.display = 'block';
@@ -90,8 +95,14 @@ window.onload = () => {
     projectTwo.setAttribute('class', 'project-container hidden')
     projectThree.setAttribute('class', 'project-container hidden')
 
+    //hide contact form
+    contactName.setAttribute('class', 'hidden')
+    contactTitle.setAttribute('class', 'hidden')
+    contactSend.setAttribute('class', 'hidden')
+    contactEmail.setAttribute('class', 'hidden')
+    contactMessage.setAttribute('class', 'hidden')
+
     if (e.target.attributes[0].nodeValue == `project-one-image`) {
-      console.log('clicked')
       projectInfo.setAttribute('class', 'showInfo');
       projectOneList.setAttribute('class', 'project-list');
     } else if (e.target.attributes[0].nodeValue == `project-two-image`) {
@@ -111,6 +122,11 @@ window.onload = () => {
     projectOne.setAttribute('class', 'project-container')
     projectTwo.setAttribute('class', 'project-container')
     projectThree.setAttribute('class', 'project-container')
+    contactName.setAttribute('class', '')
+    contactTitle.setAttribute('class', '')
+    contactSend.setAttribute('class', '')
+    contactEmail.setAttribute('class', '')
+    contactMessage.setAttribute('class', '')
   }
 
   function moveBars() {
