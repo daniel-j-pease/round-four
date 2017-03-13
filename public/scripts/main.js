@@ -22,10 +22,15 @@ window.onload = () => {
   const projectThreeList = document.querySelector('#project-three-list');
   const projectClose = document.querySelector('#project-close');
   const projectInfo = document.querySelector('#project-info');
+  const contactTitle = document.querySelector('#contact-title');
+  const contactName = document.querySelector('#contact-name');
+  const contactEmail = document.querySelector('#contact-email');
+  const contactMessage = document.querySelector('#contact-message');
+  const contactSend = document.querySelector('#contact-send');
 
   function handleHamburgerClick() {
     nav.style.display = 'block';
-    nav.className = 'navDrop';
+    nav.className = 'showNav';
   }
 
   function hideNav(e) {
@@ -84,15 +89,27 @@ window.onload = () => {
   }
 
   function handleProjectClick(e) {
+
+    //hide all project containers
+    projectOne.setAttribute('class', 'project-container hidden')
+    projectTwo.setAttribute('class', 'project-container hidden')
+    projectThree.setAttribute('class', 'project-container hidden')
+
+    //hide contact form
+    contactName.setAttribute('class', 'hidden')
+    contactTitle.setAttribute('class', 'hidden')
+    contactSend.setAttribute('class', 'hidden')
+    contactEmail.setAttribute('class', 'hidden')
+    contactMessage.setAttribute('class', 'hidden')
+
     if (e.target.attributes[0].nodeValue == `project-one-image`) {
-      console.log('clicked')
       projectInfo.setAttribute('class', 'showInfo');
       projectOneList.setAttribute('class', 'project-list');
     } else if (e.target.attributes[0].nodeValue == `project-two-image`) {
-      projectInfo.setAttribute('class', '');
+      projectInfo.setAttribute('class', 'showInfo');
       projectTwoList.setAttribute('class', 'project-list');
     } else if (e.target.attributes[0].nodeValue == `project-three-image`) {
-      projectInfo.setAttribute('class', '');
+      projectInfo.setAttribute('class', 'showInfo');
       projectThreeList.setAttribute('class', 'project-list');
     }
   }
@@ -102,6 +119,14 @@ window.onload = () => {
     projectOneList.setAttribute('class', 'project-list hidden');
     projectTwoList.setAttribute('class', 'project-list hidden');
     projectThreeList.setAttribute('class', 'project-list hidden');
+    projectOne.setAttribute('class', 'project-container')
+    projectTwo.setAttribute('class', 'project-container')
+    projectThree.setAttribute('class', 'project-container')
+    contactName.setAttribute('class', '')
+    contactTitle.setAttribute('class', '')
+    contactSend.setAttribute('class', '')
+    contactEmail.setAttribute('class', '')
+    contactMessage.setAttribute('class', '')
   }
 
   function moveBars() {
@@ -113,10 +138,6 @@ window.onload = () => {
     barTwo.style.width = `${widthTwo}px`;
   }
 
-  function checkInfoDiv() {
-    console.log('info clicked')
-  }
-
   hamburger.addEventListener('click', handleHamburgerClick);
   nav.addEventListener('click', handleNavClick);
   body.addEventListener('click', hideNav);
@@ -126,8 +147,6 @@ window.onload = () => {
   projectTwo.addEventListener('click', handleProjectClick);
   projectThree.addEventListener('click', handleProjectClick);
   projectClose.addEventListener('click', handleProjectClose);
-
-  projectInfo.addEventListener('click', checkInfoDiv)
 
   moveBars();
 };

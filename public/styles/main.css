@@ -34,10 +34,16 @@ nav {
   color: #355C7D;
   margin-right: 5vw;
   margin-top: 11vh;
-  max-height: 0;
   overflow: hidden;
   position: fixed;
   right: 0;
+
+  max-height: 0;
+  transition: max-height 0.5s ease-out 0s;
+}
+
+.showNav {
+  max-height: 500px;
   transition: max-height 0.5s ease-out 0s;
 }
 
@@ -98,10 +104,7 @@ nav > div {
 	left: 25vw;
 }
 
-.navDrop {
-  max-height: 500px;
-  transition: max-height 0.5s ease-out 0s;
-}
+
 
 #about,
 #portfolio,
@@ -173,7 +176,13 @@ h1 {
 
 .project-container {
   height: 20vh;
-	margin-bottom: 7vh;
+  margin-bottom: 7vh;
+
+  opacity: 1;
+  transition: opacity 2s ease-in;
+  -ms-transition: opacity 2s ease-in;
+  -moz-transition: opacity 2s ease-in;
+  -webkit-transition: opacity 2s ease-in;
 }
 
 .project-image {
@@ -182,6 +191,7 @@ h1 {
   height: 20vh;
 	background-color: red;
 	margin:  12.5vw;
+  z-index: 1;
 }
 
 .project-list {
@@ -203,7 +213,24 @@ h1 {
 	height: 75vh;
 	width: 80vw;
 	background-color: green;
-  z-index: 1;
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 2s ease-in;
+  -ms-transition: opacity 2s ease-in;
+  -moz-transition: opacity 2s ease-in;
+  -webkit-transition: opacity 2s ease-in;
+}
+
+.showInfo {
+  display: fixed;
+
+	opacity: 1;
+  transition: opacity 2s ease-in;
+  -ms-transition: opacity 2s ease-in;
+  -moz-transition: opacity 2s ease-in;
+  -webkit-transition: opacity 2s ease-in;
 }
 
 #project-close {
@@ -227,24 +254,6 @@ h1 {
 	left: 7.5vw;
 }
 
-.hidden {
-  opacity: 0;
-  /*display: none;*/
-  transition: opacity 2s ease-in;
-  -ms-transition: opacity 2s ease-in;
-  -moz-transition: opacity 2s ease-in;
-  -webkit-transition: opacity 2s ease-in;
-}
-
-.showInfo {
-  display: fixed;
-	opacity: 1;
-  transition: opacity 2s ease-in;
-  -ms-transition: opacity 2s ease-in;
-  -moz-transition: opacity 2s ease-in;
-  -webkit-transition: opacity 2s ease-in;
-}
-
 input,
 textarea {
   display: block;
@@ -253,6 +262,12 @@ textarea {
   font-family: 'Raleway', sans-serif;
   font-size: 1em;
   position: absolute;
+
+  opacity: 1;
+  transition: opacity 2s ease-in;
+  -ms-transition: opacity 2s ease-in;
+  -moz-transition: opacity 2s ease-in;
+  -webkit-transition: opacity 2s ease-in;
 }
 
 #contact-email,
