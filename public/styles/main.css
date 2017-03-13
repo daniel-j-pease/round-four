@@ -37,6 +37,7 @@ nav {
   overflow: hidden;
   position: fixed;
   right: 0;
+  z-index: 2;
 
   max-height: 0;
   transition: max-height 0.5s ease-out 0s;
@@ -164,16 +165,6 @@ h1 {
   width: 100vw;
 }
 
-#contact-title {
-  color: #6C5B7B;
-  display: block;
-  font-family: 'Raleway', sans-serif;
-  position: absolute;
-  text-align: center;
-  top: 315vh;
-  width: 100vw;
-}
-
 .project-container {
   height: 20vh;
   margin-bottom: 7vh;
@@ -208,11 +199,14 @@ h1 {
 
 #project-info {
 	position: fixed;
-  top: 15vh;
-  left: 10vw;
+  top: 0;
 	height: 75vh;
 	width: 80vw;
 	background-color: green;
+  border-top: 15vh solid black;
+  border-left: 10vw solid black;
+  border-right: 10vw solid black;
+  border-bottom: 15vh solid black;
 }
 
 .hidden {
@@ -268,6 +262,16 @@ textarea {
   -ms-transition: opacity 2s ease-in;
   -moz-transition: opacity 2s ease-in;
   -webkit-transition: opacity 2s ease-in;
+}
+
+#contact-title {
+  color: #6C5B7B;
+  display: block;
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+  text-align: center;
+  top: 315vh;
+  width: 100vw;
 }
 
 #contact-email,

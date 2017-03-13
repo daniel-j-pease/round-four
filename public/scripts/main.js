@@ -1,4 +1,3 @@
-console.log('main.js connected');
 ('use strict');
 
 window.onload = () => {
@@ -43,6 +42,7 @@ window.onload = () => {
   }
 
   function handleNavClick(e) {
+    console.log('clicked')
     switch (e.target.innerText) {
       case 'Home':
         scrollTo(homeHeight, 300);
