@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
     <title>Welcome!</title>
-    <link href="https://fonts.googleapis.com/css?family=Expletus+Sans|Raleway" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Expletus+Sans|Raleway" rel="stylesheet"> -->
     <link rel="stylesheet" href="./public/styles/normalize.css">
     <link rel="stylesheet" href="./public/styles/main.css">
   </head>
   <body>
     <div id="welcome">
       <div id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span id="bun1" class="bun"></span>
+        <span id="bun2" class="bun"></span>
+        <span id="bun3" class="bun"></span>
       </div>
       <nav>
         <div id="nav-home">Home</div>
@@ -32,7 +32,7 @@
       <div id="bar-three" class="bar"></div>
     </div>
     <div id="about">
-      <h1 id="aboutMe-header">About Me</h1>
+      <h1 id="about-header">About Me</h1>
       <div id="bio">&emsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati explicabo sit voluptatem ea voluptates, culpa ipsa corrupti odio. Odit accusantium, deleniti hic laudantium cum illo aliquam velit ea dignissimos error?<br><br>&emsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione reiciendis eligendi dolorum totam unde eveniet, magni illo qui vel impedit minima. Nemo vitae dignissimos unde facere, facilis dolores asperiores, sapiente!</div>
     </div>
     <div id="portfolio">
@@ -71,7 +71,7 @@
     </div>
     <div id="contact">
       <div id="message">
-        <h1 id="contact-title">get in touch</h1>
+        <h1 id="contact-header">get in touch</h1>
         <form action="" method="POST" enctype="multipart/form-data">
           <input type="hidden" name="action" value="submit">
           <input id ="contact-name" type="text" name="name" value="" placeholder="your name" required>
@@ -86,6 +86,7 @@
       <div id="github" class="social"></div>
       <div id="twitter" class="social"></div>
     </footer>
+    <script src="./public/scripts/colorizer.js" charset="utf-8"></script>
     <script src="./public/scripts/main.js" charset="utf-8"></script>
   </body>
 </html>
