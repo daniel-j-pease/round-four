@@ -19,7 +19,7 @@
   justify-content: center;
 }
 
-#hamburger > span {
+.bun {
   align-self: center;
   background-color: #F8B195;
   display: block;
@@ -61,7 +61,7 @@ nav > div {
   position: absolute;
   font-size: 4.236em;
   line-height: 15vh;
-  font-family: 'Expletus Sans', cursive;
+  /*font-family: 'Expletus Sans', cursive;*/
 }
 
 #first {
@@ -136,7 +136,7 @@ nav > div {
 
 h1 {
   color: #F8B195;
-  font-family: 'Expletus Sans', cursive;
+  /*font-family: 'Expletus Sans', cursive;*/
   font-size: 2.618em;
   text-align: center;
   position: relative;
@@ -149,7 +149,7 @@ h1 {
 }
 
 #bio {
-  font-family: 'Raleway', sans-serif;
+  /*font-family: 'Raleway', sans-serif;*/
   font-size: 1em;
   position: relative;
   top: 23vh;
@@ -158,7 +158,7 @@ h1 {
 
 #mobile-clue {
   color: red;
-  font-family: 'Raleway', sans-serif;
+  /*font-family: 'Raleway', sans-serif;*/
   font-size: 20px;
   position: relative;
   text-align: center;
@@ -180,7 +180,6 @@ h1 {
 	width: 75vw;
   position: absolute;
   height: 20vh;
-	background-color: red;
 	margin:  12.5vw;
   z-index: 1;
 }
@@ -202,7 +201,7 @@ h1 {
   top: 0;
 	height: 75vh;
 	width: 80vw;
-	background-color: green;
+	background-color: #fafafa;
   border-top: 15vh solid black;
   border-left: 10vw solid black;
   border-right: 10vw solid black;
@@ -233,7 +232,7 @@ h1 {
 	line-height: 8vh;
 	left: calc(80vw - 8vh);
 	width: 8vh;
-	color: white;
+	color: #fafafa;
 	background-color: black;
 	text-align: center;
 }
@@ -253,7 +252,7 @@ textarea {
   display: block;
   border: none;
   border-radius: 10px;
-  font-family: 'Raleway', sans-serif;
+  /*font-family: 'Raleway', sans-serif;*/
   font-size: 1em;
   position: absolute;
 
@@ -264,10 +263,10 @@ textarea {
   -webkit-transition: opacity 2s ease-in;
 }
 
-#contact-title {
+#contact-header {
   color: #6C5B7B;
   display: block;
-  font-family: 'Raleway', sans-serif;
+  /*font-family: 'Raleway', sans-serif;*/
   position: absolute;
   text-align: center;
   top: 315vh;
