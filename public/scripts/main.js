@@ -22,6 +22,7 @@ const contactSend = document.querySelector('#contact-send');
 const footer = document.querySelector('footer');
 const github = document.querySelector('#github');
 const hamburger = document.getElementById('hamburger');
+const mobileClue = document.getElementById('mobile-clue');
 const nav = document.querySelector('nav');
 const projects = document.querySelector('#projects');
 const projectClose = document.querySelector('#project-close');
@@ -36,11 +37,11 @@ const projectThreeList = document.querySelector('#project-three-list');
 const welcome = document.querySelector('#welcome');
 
 // seize viewport height for purposes of scrolling
+const viewHeight = window.innerHeight;
 const aboutHeight = viewHeight;
 const contactHeight = viewHeight * 3;
 const homeHeight = 0;
 const projectsHeight = viewHeight * 2;
-const viewHeight = window.innerHeight;
 
 // on hamburger click unhide nav with transition
 function handleHamburgerClick() {
@@ -108,10 +109,12 @@ function checkHamburger() {
 }
 
 function handleProjectClick(e) {
-  //hide all project containers
+  //hide all project containers, project header, and mobile-clue
   projectOne.setAttribute('class', 'project-container hidden');
   projectTwo.setAttribute('class', 'project-container hidden');
   projectThree.setAttribute('class', 'project-container hidden');
+  projectHeader.setAttribute('class', 'hidden');
+  mobileClue.setAttribute('class', 'hidden');
 
   //hide contact form
   contactName.setAttribute('class', 'hidden');
@@ -133,7 +136,7 @@ function handleProjectClick(e) {
   }
 }
 
-// hide info div and all info lists, unhide contact forms and project containers
+// hide info div and all info lists, unhide contact forms, project containers, project header, mobile-clue
 function handleProjectClose(e) {
   projectInfo.setAttribute('class', 'hidden');
   projectOneList.setAttribute('class', 'project-list hidden');
@@ -144,6 +147,8 @@ function handleProjectClose(e) {
   projectThree.setAttribute('class', 'project-container');
   contactName.setAttribute('class', '');
   contactHeader.setAttribute('class', '');
+  projectHeader.setAttribute('class', '');
+  mobileClue.setAttribute('class', '');
   contactSend.setAttribute('class', '');
   contactEmail.setAttribute('class', '');
   contactMessage.setAttribute('class', '');
@@ -169,7 +174,7 @@ function colorizer() {
     mountain: {
       background: '#fafafa',
       barsHeaders: 'green',
-      text: 'white',
+      text: 'blue',
       footer: 'green',
       welcome: 'green'
     },
@@ -188,9 +193,9 @@ function colorizer() {
       welcome: 'pink'
     },
     dusk: {
-      background: '#green',
+      background: 'green',
       barsHeaders: 'purple',
-      text: 'green',
+      text: 'purple',
       footer: 'purple',
       welcome: 'purple'
     }
@@ -218,9 +223,11 @@ function colorizer() {
   barThree.style.backgroundColor = colors[pallets[picker]].barsHeaders;
 
   // set text elements to given pallet's text color
-  projectOneList.style.backgroundColor = colors[pallets[picker]].text;
-  projectTwoList.style.backgroundColor = colors[pallets[picker]].text;
-  projectThreeList.style.backgroundColor = colors[pallets[picker]].text;
+
+  // remember to standardize li color
+  // projectOneList.style.color = colors[pallets[picker]].text;
+  // projectTwoList.style.color = colors[pallets[picker]].text;
+  // projectThreeList.style.color = colors[pallets[picker]].text;
   contactSend.style.color = colors[pallets[picker]].text;
   nav.style.color = colors[pallets[picker]].text;
   bio.style.color = colors[pallets[picker]].text;

@@ -170,13 +170,14 @@ h1 {
   margin-bottom: 7vh;
 
   opacity: 1;
-  transition: opacity 2s ease-in;
-  -ms-transition: opacity 2s ease-in;
-  -moz-transition: opacity 2s ease-in;
-  -webkit-transition: opacity 2s ease-in;
+  transition: opacity .7s ease-in-out;
+  -ms-transition: opacity .7s ease-in-out;
+  -moz-transition: opacity .7s ease-in-out;
+  -webkit-transition: opacity .7s ease-in-out;
 }
 
 .project-image {
+  border-radius: 10px;
 	width: 75vw;
   position: absolute;
   height: 20vh;
@@ -210,20 +211,20 @@ h1 {
 
 .hidden {
   opacity: 0;
-  transition: opacity 2s ease-in;
-  -ms-transition: opacity 2s ease-in;
-  -moz-transition: opacity 2s ease-in;
-  -webkit-transition: opacity 2s ease-in;
+  transition: opacity .3s ease-in-out;
+  -ms-transition: opacity .3s ease-in-out;
+  -moz-transition: opacity .3s ease-in-out;
+  -webkit-transition: opacity .3s ease-in-out;
 }
 
 .showInfo {
   display: fixed;
 
 	opacity: 1;
-  transition: opacity 2s ease-in;
-  -ms-transition: opacity 2s ease-in;
-  -moz-transition: opacity 2s ease-in;
-  -webkit-transition: opacity 2s ease-in;
+  transition: opacity .7s ease-in-out;
+  -ms-transition: opacity .7s ease-in-out;
+  -moz-transition: opacity .7s ease-in-out;
+  -webkit-transition: opacity .7s ease-in-out;
 }
 
 #project-close {
@@ -257,10 +258,10 @@ textarea {
   position: absolute;
 
   opacity: 1;
-  transition: opacity 2s ease-in;
-  -ms-transition: opacity 2s ease-in;
-  -moz-transition: opacity 2s ease-in;
-  -webkit-transition: opacity 2s ease-in;
+  transition: opacity .7s ease-in-out;
+  -ms-transition: opacity .7s ease-in-out;
+  -moz-transition: opacity .7s ease-in-out;
+  -webkit-transition: opacity .7s ease-in-out;
 }
 
 #contact-header {
