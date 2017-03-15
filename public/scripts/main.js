@@ -196,7 +196,7 @@ function colorizer() {
       background: 'green',
       barsHeaders: 'purple',
       text: 'purple',
-      footer: 'purple',
+      footer: 'orange',
       welcome: 'purple'
     }
   };
@@ -209,6 +209,7 @@ function colorizer() {
   about.style.backgroundColor = colors[pallets[picker]].background;
   portfolio.style.backgroundColor = colors[pallets[picker]].background;
   contact.style.backgroundColor = colors[pallets[picker]].background;
+  body.style.backgroundColor = colors[pallets[picker]].background;
 
   // set navs, bars, headers to given pallet's barsHeader color
   nav.style.backgroundColor = colors[pallets[picker]].barsHeaders;
@@ -223,7 +224,6 @@ function colorizer() {
   barThree.style.backgroundColor = colors[pallets[picker]].barsHeaders;
 
   // set text elements to given pallet's text color
-
   // remember to standardize li color
   // projectOneList.style.color = colors[pallets[picker]].text;
   // projectTwoList.style.color = colors[pallets[picker]].text;
@@ -233,12 +233,15 @@ function colorizer() {
   bio.style.color = colors[pallets[picker]].text;
   first.style.color = colors[pallets[picker]].text;
   last.style.color = colors[pallets[picker]].text;
+  mobileClue.style.color = colors[pallets[picker]].text;
   title.style.color = colors[pallets[picker]].text;
 
   // set footer elements given pallet's footer color
   github.style.backgroundColor = colors[pallets[picker]].footer;
   contactSend.style.backgroundColor = colors[pallets[picker]].footer;
   footer.style.backgroundColor = colors[pallets[picker]].footer;
+  twitter.style.backgroundColor = colors[pallets[picker]].footer;
+  linkedin.style.backgroundColor = colors[pallets[picker]].footer;
 }
 
 // assign all event listners onload
@@ -256,5 +259,5 @@ window.onload = () => {
 
   // invoke moveBars and colorizer to dynamically set pallet and bar width
   moveBars();
-  colorizer();
+  // colorizer();
 };

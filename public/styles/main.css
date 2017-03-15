@@ -119,11 +119,11 @@ nav > div {
 }
 
 #about {
-  background-color: palegoldenrod;
+  background-color: hsl(0, 100%, 50%);
 }
 
 #welcome {
-  background-color: lightblue;
+  background-color: complement(hsl(0, 100%, 50%));
 }
 
 #portfolio {
@@ -144,8 +144,8 @@ h1 {
   margin: 0;
 }
 
-#aboutMe-header {
-  top: 11vh;
+#about-header {
+  top: 20vh;
 }
 
 #bio {
@@ -159,10 +159,15 @@ h1 {
 #mobile-clue {
   color: red;
   /*font-family: 'Raleway', sans-serif;*/
-  font-size: 20px;
-  position: relative;
+  font-size: 1em;
+  position: absolute;
+  margin-top: 1vh;
   text-align: center;
   width: 100vw;
+}
+
+#project-header {
+  margin-top: 4vh;
 }
 
 .project-container {
