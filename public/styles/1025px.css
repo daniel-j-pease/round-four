@@ -3,4 +3,42 @@
   .tenTwentyFive {
     display: block;
   }
+
+  * {
+    font-size: 34px;
+  }
+
+  #first {
+    top: 33vh;
+    right: 21vw;
+  }
+
+  #last {
+    left: 21vw;
+  }
+
+  #bar-one {
+    top: 39.5vh;
+    left: 13vw;
+  }
+
+  #bar-two {
+    top: 51.5vh;
+    right: 13vw;
+  }
+
+  #title {
+    font-size: 1em;
+    top: 62vh;
+  }
+
+  #bar-three {
+    top: 66.5vh;
+  }
+
+  nav > div {
+    font-size: .618em;
+    line-height: 40px;
+    width: 12vw;
+  }
 }

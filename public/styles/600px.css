@@ -1,11 +1,16 @@
 @media (min-width:600px) and (max-width:800px){
 
+  .sixHundred {
+    display: block;
+  }
+
   * {
     font-size: 23px;
   }
 
   #first {
     right: 15vw;
+    top:35vh;
   }
 
   #last {
@@ -18,15 +23,27 @@
   }
 
   #bar-two {
-    top: 51.5vh;
     right: 13vw;
   }
 
   #bar-three {
-    top: 66.5vh;
+    top: 63.5vh;
   }
 
-  .sixHundred {
-    display: block;
+  .social {
+    height: 90px;
+    width: 90px;
+  }
+
+  #github {
+    left: calc(50vw - 45px);
+  }
+
+  #twitter {
+    right: 10vw;
+  }
+
+  #linkedin {
+    left: 10vw;
   }
 }

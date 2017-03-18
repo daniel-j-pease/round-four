@@ -3,4 +3,43 @@
   .twelveEightyOne {
     display: block;
   }
+
+  * {
+    font-size: 40px;
+  }
+
+  #first {
+    top: 32vh;
+    right: 21vw;
+  }
+
+  #last {
+    top:44vh;
+    left: 21vw;
+  }
+
+  #bar-one {
+    top: 38.5vh;
+    left: 13vw;
+  }
+
+  #bar-two {
+    top: 52.5vh;
+    right: 13vw;
+  }
+
+  #title {
+    font-size: 1em;
+    top: 62vh;
+  }
+
+  #bar-three {
+    top: 66.5vh;
+  }
+
+  nav > div {
+    font-size: .618em;
+    line-height: 40px;
+    width: 9vw;
+  }
 }

@@ -5,7 +5,7 @@
   }
 
   * {
-    font-size: 25px;
+    font-size: 28px;
   }
 
   #first {
@@ -32,6 +32,29 @@
   }
 
   #bar-three {
-    top: 68.5vh;
+    top: 66.5vh;
+  }
+
+  nav > div {
+    font-size: .618em;
+    line-height: 40px;
+    width: 12vw;
+  }
+
+  .social {
+    height: 100px;
+    width: 100px;
+  }
+
+  #github {
+    left: calc(50vw - 50px);
+  }
+
+  #twitter {
+    right: 12vw;
+  }
+
+  #linkedin {
+    left: 12vw;
   }
 }

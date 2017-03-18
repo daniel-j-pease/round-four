@@ -65,19 +65,19 @@ nav > div {
 }
 
 #first {
-  top:35vh;
+  top:37vh;
   right: 10vw;
 }
 
 #last {
-  top:45vh;
+  top:43vh;
   left: 10vw;
 }
 
 #title {
   font-size: 1.333em;
   text-align: center;
-  top: 60vh;
+  top: 59vh;
   position: absolute;
 }
 
@@ -89,17 +89,17 @@ nav > div {
 }
 
 #bar-one {
-  top: 41.5vh;
+  top: 43.5vh;
   left: 10vw;
 }
 
 #bar-two {
-  top: 51.5vh;
+  top: 50.5vh;
   right: 10vw;
 }
 
 #bar-three {
-	top: 65vh;
+	top: 64vh;
 	left: 25vw;
 }
 
@@ -219,7 +219,8 @@ h1 {
 }
 
 .showInfo {
-  display: fixed;
+  /*display: fixed;*/
+  display: none;
 
 	opacity: 1;
   transition: opacity .7s ease-in-out;
@@ -256,7 +257,7 @@ textarea {
   border-radius: 10px;
   /*font-family: 'Raleway', sans-serif;*/
   font-size: 1em;
-  position: absolute;
+  position: relative;
 
   opacity: 1;
   transition: opacity .7s ease-in-out;
@@ -269,42 +270,40 @@ textarea {
   color: #6C5B7B;
   display: block;
   /*font-family: 'Raleway', sans-serif;*/
-  position: absolute;
+  /*position: absolute;*/
+  position: relative;
   text-align: center;
-  top: 315vh;
+  top: 15vh;
   width: 100vw;
 }
 
 #contact-email,
 #contact-name {
   line-height: 5vh;
+  display: inline-block;
+  position: relative;
   text-align: center;
-  top: 330vh;
-  width: 30vw;
-}
-
-#contact-name {
-  left: 15vw;
-}
-
-#contact-email {
-  left: 55vw;
+  top: 23vh;
+  left: 20vw;
+  width: 28vw;
+  margin-right: 2vw;
 }
 
 #contact-message {
   height: 15vh;
   left: 10vw;
   padding: 2.5vw;
-  top: 340vh;
+  top: 26vh;
   width: 75vw;
 }
 
 #contact-send {
   background-color: #355C7D;
+  /*position: relative;*/
   color: #F8B195;
   left: 42.5vw;
   line-height: 5vh;
-  top: 360vh;
+  top: 28vh;
   width: 15vw;
 }
 
