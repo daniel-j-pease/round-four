@@ -39,7 +39,7 @@ nav {
   right: 0;
   z-index: 2;
 
-  max-height: 0;
+  max-height: 0px;
   transition: max-height 0.5s ease-out 0s;
 }
 
@@ -79,7 +79,6 @@ nav > div {
   text-align: center;
   top: 60vh;
   position: absolute;
-  width: 100vw;
 }
 
 .bar {
@@ -101,11 +100,8 @@ nav > div {
 
 #bar-three {
 	top: 65vh;
-	width: 30vw;
 	left: 25vw;
 }
-
-
 
 #about,
 #portfolio,
@@ -119,11 +115,11 @@ nav > div {
 }
 
 #about {
-  background-color: hsl(0, 100%, 50%);
+  /*background-color: hsl(0, 100%, 50%);*/
 }
 
 #welcome {
-  background-color: complement(hsl(0, 100%, 50%));
+  /*background-color: complement(hsl(0, 100%, 50%));*/
 }
 
 #portfolio {
@@ -323,10 +319,10 @@ footer {
   background-color: #355C7D;
   background-size: 100% 100%;
   border-radius: 50px;
-  height: 80px;
-  top: calc(385vh - 40px);
+  height: 70px;
+  top: calc(385vh);
   position: absolute;
-  width: 80px;
+  width: 70px;
 }
 
 #linkedin {
@@ -336,10 +332,21 @@ footer {
 
 #github {
   background-image: url('../assets/github.png');
-  left: calc(50vw - 40px);
+  left: calc(50vw - 35px);
 }
 
 #twitter {
   background-image: url('../assets/twitter.png');
   right: 8vw;
+}
+
+.tiny,
+.threeTwenty,
+.fourEighty,
+.sixHundred,
+.eightOhOne,
+.tenTwentyFive,
+.twelveEightyOne {
+  display: none;
+  position: absolute;
 }

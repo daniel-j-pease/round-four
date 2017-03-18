@@ -1,0 +1,24 @@
+@media (min-width:320px) and (max-width:479px){
+
+  * {
+    font-size: 17px;
+  }
+
+  .threeTwenty {
+    display: block;
+  }
+
+  nav > div {
+    width: 30vw;
+  }
+
+  .social {
+    height: 60px;
+    width: 60px;
+  }
+
+  #github {
+    background-image: url('../assets/github.png');
+    left: calc(50vw - 30px);
+  }
+}

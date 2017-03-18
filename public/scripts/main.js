@@ -156,12 +156,21 @@ function handleProjectClose(e) {
 
 // set bar width to cover distance between beginning of opposite span
 function moveBars() {
-  let widthOne = first.getBoundingClientRect().left - window.innerWidth / 7;
-  let widthTwo = window.innerWidth -
-    window.innerWidth / 7 -
-    last.getBoundingClientRect().right;
+  let widthOne = first.getBoundingClientRect().left - last.getBoundingClientRect().left - (window.innerWidth/55);
+  let widthTwo = first.getBoundingClientRect().right - last.getBoundingClientRect().right - (window.innerWidth/55);
+  let widthThree = title.getBoundingClientRect().right - title.getBoundingClientRect().left
+
+  let leftOne = last.getBoundingClientRect().left
+  let rightTwo = window.innerWidth - first.getBoundingClientRect().right
+  let leftThree = window.innerWidth/2 - widthThree/2
   barOne.style.width = `${widthOne}px`;
   barTwo.style.width = `${widthTwo}px`;
+  barThree.style.width = `${widthThree}px`;
+
+  barOne.style.left = `${leftOne}px`;
+  barTwo.style.right = `${rightTwo}px`;
+  title.style.left = `${leftThree}px`;
+  barThree.style.left = `${leftThree}px`;
 }
 
 // unfinished; randomize color pallet
@@ -172,7 +181,7 @@ function colorizer() {
   // object of color pallet objects
   const colors = {
     mountain: {
-      background: '#fafafa',
+      background: 'lightblue',
       barsHeaders: 'green',
       text: 'blue',
       footer: 'green',
@@ -195,7 +204,7 @@ function colorizer() {
     dusk: {
       background: 'green',
       barsHeaders: 'purple',
-      text: 'purple',
+      text: 'palegoldenrod',
       footer: 'orange',
       welcome: 'purple'
     }
@@ -259,5 +268,5 @@ window.onload = () => {
 
   // invoke moveBars and colorizer to dynamically set pallet and bar width
   moveBars();
-  // colorizer();
+  colorizer();
 };

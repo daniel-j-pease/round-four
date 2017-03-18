@@ -1,0 +1,32 @@
+@media (min-width:600px) and (max-width:800px){
+
+  * {
+    font-size: 23px;
+  }
+
+  #first {
+    right: 15vw;
+  }
+
+  #last {
+    left: 15vw;
+  }
+
+  #bar-one {
+    top: 41.5vh;
+    left: 13vw;
+  }
+
+  #bar-two {
+    top: 51.5vh;
+    right: 13vw;
+  }
+
+  #bar-three {
+    top: 66.5vh;
+  }
+
+  .sixHundred {
+    display: block;
+  }
+}

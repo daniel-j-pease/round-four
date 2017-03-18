@@ -1,0 +1,37 @@
+@media (min-width:801px) and (max-width:1024px) {
+
+  .eightOhOne {
+    display: block;
+  }
+
+  * {
+    font-size: 25px;
+  }
+
+  #first {
+    top: 32vh;
+    right: 21vw;
+  }
+
+  #last {
+    left: 21vw;
+  }
+
+  #bar-one {
+    top: 38.5vh;
+    left: 13vw;
+  }
+
+  #bar-two {
+    top: 51.5vh;
+    right: 13vw;
+  }
+
+  #title {
+    top: 62vh;
+  }
+
+  #bar-three {
+    top: 68.5vh;
+  }
+}
