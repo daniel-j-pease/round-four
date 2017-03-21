@@ -3,6 +3,14 @@
     display: block;
   }
 
+  #first {
+    top: 35vh;
+  }
+
+  #bar-one {
+    top: 41.5vh;
+  }
+
   * {
     font-size: 20px;
   }

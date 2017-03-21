@@ -17,6 +17,10 @@
     width: 60px;
   }
 
+  #bar-three {
+    top: 63vh;
+  }
+
   #github {
     background-image: url('../assets/github.png');
     left: calc(50vw - 30px);

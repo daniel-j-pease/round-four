@@ -29,16 +29,21 @@
 
   #title {
     top: 62vh;
+    font-size: 1em;
   }
 
   #bar-three {
-    top: 66.5vh;
+    top: 68vh;
   }
 
   nav > div {
     font-size: .618em;
     line-height: 40px;
     width: 12vw;
+  }
+
+  #bio {
+    margin: 4vw;
   }
 
   .social {
