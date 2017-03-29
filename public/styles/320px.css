@@ -56,4 +56,8 @@
   	width: 75vw;
     left: 12.5vw;
   }
+
+  .red {
+    background-color: red;
+  }
 }

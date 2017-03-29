@@ -23,6 +23,10 @@ window.onload = () => {
   const hamburger = document.getElementById('hamburger');
   const mobileClue = document.getElementById('mobile-clue');
   const nav = document.querySelector('nav');
+  const navHome = document.querySelector('#nav-home');
+  const navAbout = document.querySelector('#nav-about');
+  const navProjects = document.querySelector('#nav-projects');
+  const navContact = document.querySelector('#nav-contact');
   const projects = document.querySelector('#projects');
   const projectClose = document.querySelector('#project-close');
   const projectHeader = document.querySelector('#project-header');
@@ -54,10 +58,24 @@ window.onload = () => {
   function hideNav(e) {
     if (e.target !== hamburger && e.srcElement.nodeName !== 'SPAN') {
       nav.className = '';
+      clearColor();
     }
     if (e.target.className === 'not') {
       nav.className = '';
+      clearColor();
     }
+  }
+
+  function clearColor(ele) {
+    let highlight = setTimeout(
+      () => {
+        navHome.className = '';
+        navAbout.className = '';
+        navProjects.className = '';
+        navContact.className = '';
+      },
+      500
+    );
   }
 
   // scrolls in response to nav selection
@@ -82,15 +100,19 @@ window.onload = () => {
     switch (e.target.innerText) {
       case 'Home':
         body.scrollTop = 0;
+        e.target.setAttribute('class', 'red');
         break;
       case 'About':
-        body.scrollTop = aboutHeight
+        body.scrollTop = aboutHeight;
+        e.target.setAttribute('class', 'red');
         break;
       case 'Projects':
-        body.scrollTop = projectsHeight
+        body.scrollTop = projectsHeight;
+        e.target.setAttribute('class', 'red');
         break;
       case 'Contact':
-        body.scrollTop = contactHeight
+        body.scrollTop = contactHeight;
+        e.target.setAttribute('class', 'red');
         break;
     }
   }
@@ -265,12 +287,12 @@ window.onload = () => {
   }
 
   function handleSocialClick(e) {
-    if (e.target.id === "twitter") {
-      window.open("https://twitter.com/realdanpease", "_blank");
-    } else if (e.target.id === "github") {
-      window.open("https://github.com/daniel-j-pease", "_blank");
+    if (e.target.id === 'twitter') {
+      window.open('https://twitter.com/realdanpease', '_blank');
+    } else if (e.target.id === 'github') {
+      window.open('https://github.com/daniel-j-pease', '_blank');
     } else {
-      window.open("https://www.linkedin.com/in/daniel-pease", "_blank");
+      window.open('https://www.linkedin.com/in/daniel-pease', '_blank');
     }
   }
 
