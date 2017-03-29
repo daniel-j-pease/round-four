@@ -106,15 +106,15 @@ window.onload = () => {
         e.target.setAttribute('class', 'red');
         break;
       case 'About':
-        body.scrollTop = aboutHeight;
+        document.body.scrollTop = aboutHeight;
         e.target.setAttribute('class', 'red');
         break;
       case 'Projects':
-        body.scrollTop = projectsHeight;
+        document.body.scrollTop = projectsHeight;
         e.target.setAttribute('class', 'red');
         break;
       case 'Contact':
-        body.scrollTop = contactHeight;
+        document.body.scrollTop = contactHeight;
         e.target.setAttribute('class', 'red');
         break;
     }
