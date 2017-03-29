@@ -47,7 +47,7 @@ window.onload = () => {
   const aboutHeight = viewHeight;
   const contactHeight = body.scrollHeight;
   const homeHeight = 0;
-  const projectsHeight = projectHeader.scrollHeight + (2*viewHeight);
+  const projectsHeight = projectHeader.getBoundingClientRect().top);
   console.log(projectsHeight, (2 * viewHeight))
 
   // on hamburger click unhide nav with transition
