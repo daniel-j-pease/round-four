@@ -44,11 +44,11 @@ window.onload = () => {
 
   // seize viewport height for purposes of scrolling
   const viewHeight = window.innerHeight;
-  const aboutHeight = viewHeight;
-  const contactHeight = body.scrollHeight;
   const homeHeight = 0;
+  const aboutHeight = viewHeight;
   const projectsHeight = projectHeader.getBoundingClientRect().top;
-  console.log(projectsHeight, (2 * viewHeight))
+  const contactHeight = body.scrollHeight;
+  console.log(viewHeight)
 
   // on hamburger click unhide nav with transition
   function handleHamburgerClick() {
