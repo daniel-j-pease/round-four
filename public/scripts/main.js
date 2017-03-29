@@ -265,11 +265,21 @@ window.onload = () => {
     linkedin.style.backgroundColor = colors[pallets[picker]].footer;
   }
 
+  function handleSocialClick(e) {
+    if (e.target.id === "twitter") {
+      window.open("https://twitter.com/realdanpease", "_blank");
+    } else if (e.target.id === "github") {
+      window.open("https://github.com/daniel-j-pease", "_blank");
+    } else {
+      window.open("https://www.linkedin.com/in/daniel-pease", "_blank");
+    }
+  }
+
   // assign all event listners
   hamburger.addEventListener('click', handleHamburgerClick);
   nav.addEventListener('click', handleNavClick);
   body.addEventListener('click', hideNav);
-  
+
   // window.addEventListener('scroll', checkHamburger);
   window.addEventListener('resize', moveBars);
   projectOne.addEventListener('click', handleProjectClick);
@@ -277,6 +287,9 @@ window.onload = () => {
   projectThree.addEventListener('click', handleProjectClick);
   projectFour.addEventListener('click', handleProjectClick);
   projectClose.addEventListener('click', handleProjectClose);
+  twitter.addEventListener('click', handleSocialClick);
+  github.addEventListener('click', handleSocialClick);
+  linkedin.addEventListener('click', handleSocialClick);
 
   // invoke moveBars and colorizer to dynamically set pallet and bar width
   moveBars();
