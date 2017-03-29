@@ -117,22 +117,6 @@ nav > div {
   height: 70vh;
 }
 
-#about {
-  /*background-color: hsl(0, 100%, 50%);*/
-}
-
-#welcome {
-  /*background-color: complement(hsl(0, 100%, 50%));*/
-}
-
-#portfolio {
-  background-color: plum;
-}
-
-#contact {
-  background-color: darksalmon;
-}
-
 h1 {
   color: #F8B195;
   /*font-family: 'Expletus Sans', cursive;*/
