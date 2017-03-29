@@ -1,6 +1,7 @@
 ('use strict');
 
 window.onload = () => {
+
   // declare node variables (alphebetical unless part of numbered set)
   const about = document.querySelector('#about');
   const aboutHeader = document.querySelector('#about-header');
@@ -46,7 +47,7 @@ window.onload = () => {
   const aboutHeight = viewHeight;
   const contactHeight = body.scrollHeight;
   const homeHeight = 0;
-  const projectsHeight = viewHeight * 2;
+  const projectsHeight = projectHeader.scrollHeight;
 
   // on hamburger click unhide nav with transition
   function handleHamburgerClick() {
@@ -66,6 +67,7 @@ window.onload = () => {
     }
   }
 
+  // 500ms after hiding the nav, remove highlight from nav items
   function clearColor(ele) {
     let highlight = setTimeout(
       () => {
