@@ -31,15 +31,17 @@ const projectInfo = document.querySelector('#project-info');
 const projectOne = document.querySelector('#project-one-container');
 const projectTwo = document.querySelector('#project-two-container');
 const projectThree = document.querySelector('#project-three-container');
+const projectFour = document.querySelector('#project-four-container');
 const projectOneList = document.querySelector('#project-one-list');
 const projectTwoList = document.querySelector('#project-two-list');
 const projectThreeList = document.querySelector('#project-three-list');
+const projectFourList = document.querySelector('#project-four-list');
 const welcome = document.querySelector('#welcome');
 
 // seize viewport height for purposes of scrolling
 const viewHeight = window.innerHeight;
 const aboutHeight = viewHeight;
-const contactHeight = viewHeight * 3;
+const contactHeight = document.body.scrollHeight
 const homeHeight = 0;
 const projectsHeight = viewHeight * 2;
 
@@ -113,6 +115,7 @@ function handleProjectClick(e) {
   projectOne.setAttribute('class', 'project-container hidden');
   projectTwo.setAttribute('class', 'project-container hidden');
   projectThree.setAttribute('class', 'project-container hidden');
+  projectFour.setAttribute('class', 'project-container hidden');
   projectHeader.setAttribute('class', 'hidden');
   mobileClue.setAttribute('class', 'hidden');
 
@@ -133,6 +136,9 @@ function handleProjectClick(e) {
   } else if (e.target.attributes[0].nodeValue == `project-three-image`) {
     projectInfo.setAttribute('class', 'showInfo');
     projectThreeList.setAttribute('class', 'project-list');
+  } else if (e.target.attributes[0].nodeValue == `project-four-image`) {
+    projectInfo.setAttribute('class', 'showInfo');
+    projectFourList.setAttribute('class', 'project-list');
   }
 }
 
@@ -142,9 +148,11 @@ function handleProjectClose(e) {
   projectOneList.setAttribute('class', 'project-list hidden');
   projectTwoList.setAttribute('class', 'project-list hidden');
   projectThreeList.setAttribute('class', 'project-list hidden');
+  projectFourList.setAttribute('class', 'project-list hidden');
   projectOne.setAttribute('class', 'project-container');
   projectTwo.setAttribute('class', 'project-container');
   projectThree.setAttribute('class', 'project-container');
+  projectFour.setAttribute('class', 'project-container');
   contactName.setAttribute('class', '');
   contactHeader.setAttribute('class', '');
   projectHeader.setAttribute('class', '');
@@ -156,12 +164,26 @@ function handleProjectClose(e) {
 
 // set bar width to cover distance between beginning of opposite span
 function moveBars() {
-  let widthOne = first.getBoundingClientRect().left - window.innerWidth / 7;
-  let widthTwo = window.innerWidth -
-    window.innerWidth / 7 -
-    last.getBoundingClientRect().right;
+  let widthOne = first.getBoundingClientRect().left -
+    last.getBoundingClientRect().left -
+    window.innerWidth / 55;
+  let widthTwo = first.getBoundingClientRect().right -
+    last.getBoundingClientRect().right -
+    window.innerWidth / 55;
+  let widthThree = title.getBoundingClientRect().right -
+    title.getBoundingClientRect().left;
+
+  let leftOne = last.getBoundingClientRect().left;
+  let rightTwo = window.innerWidth - first.getBoundingClientRect().right;
+  let leftThree = window.innerWidth / 2 - widthThree / 2;
   barOne.style.width = `${widthOne}px`;
   barTwo.style.width = `${widthTwo}px`;
+  barThree.style.width = `${widthThree}px`;
+
+  barOne.style.left = `${leftOne}px`;
+  barTwo.style.right = `${rightTwo}px`;
+  title.style.left = `${leftThree}px`;
+  barThree.style.left = `${leftThree}px`;
 }
 
 // unfinished; randomize color pallet
@@ -172,7 +194,7 @@ function colorizer() {
   // object of color pallet objects
   const colors = {
     mountain: {
-      background: '#fafafa',
+      background: 'lightblue',
       barsHeaders: 'green',
       text: 'blue',
       footer: 'green',
@@ -195,7 +217,7 @@ function colorizer() {
     dusk: {
       background: 'green',
       barsHeaders: 'purple',
-      text: 'purple',
+      text: 'palegoldenrod',
       footer: 'orange',
       welcome: 'purple'
     }
@@ -255,9 +277,10 @@ window.onload = () => {
   projectOne.addEventListener('click', handleProjectClick);
   projectTwo.addEventListener('click', handleProjectClick);
   projectThree.addEventListener('click', handleProjectClick);
+  projectFour.addEventListener('click', handleProjectClick);
   projectClose.addEventListener('click', handleProjectClose);
 
   // invoke moveBars and colorizer to dynamically set pallet and bar width
   moveBars();
-  // colorizer();
+  colorizer();
 };

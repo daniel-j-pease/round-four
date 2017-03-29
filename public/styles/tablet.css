@@ -1,7 +1,7 @@
-@media only screen and (max-width: 1024px) and (min-width: 415px) {
+@media (min-width: 415px) {
 
   * {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   #hamburger {
@@ -14,14 +14,25 @@
     margin-bottom: 11px;
   }
 
+  nav > div {
+    line-height: 55px;
+  }
+
   .social {
-    background-color: purple;
     height: 120px;
-    top: calc(385vh - 60px);
+    top: calc(385vh);
     width: 120px;
   }
 
   #github {
     left: calc(50vw - 60px);
+  }
+
+  #twitter {
+    right: 12vw;
+  }
+
+  #linkedin {
+    left: 12vw;
   }
 }

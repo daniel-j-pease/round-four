@@ -1,0 +1,72 @@
+@media (min-width:1025px) and (max-width:1280px) {
+
+  .tenTwentyFive {
+    display: block;
+  }
+
+  * {
+    font-size: 23px;
+  }
+
+  #first {
+    font-size: 148px;
+    top: 30vh;
+    right: 21vw;
+  }
+
+  #last {
+    font-size: 148px;
+    left: 21vw;
+  }
+
+  #bar-one {
+    top: 36.5vh;
+    left: 13vw;
+  }
+
+  #bar-two {
+    top: 51.5vh;
+    right: 13vw;
+  }
+
+  #title {
+    font-size: 1em;
+    top: 62vh;
+  }
+
+  #bar-three {
+    top: 67.5vh;
+  }
+
+  #bio {
+    /*margin: 7vw 15vw;*/
+  }
+
+  nav > div {
+    font-size: .618em;
+    line-height: 40px;
+    width: 12vw;
+  }
+
+  .project-image {
+    width: 50vw;
+    left: 25vw;
+  }
+
+  #contact-header {
+    top: 10vh;
+  }
+
+  #contact-email,
+  #contact-name {
+    top: 15vh;
+  }
+
+  #contact-message {
+    top: 19vh;
+  }
+
+  #contact-send {
+    top: 23vh;
+  }
+}

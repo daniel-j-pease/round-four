@@ -1,0 +1,61 @@
+@media (min-width:801px) and (max-width:1024px) {
+
+  .eightOhOne {
+    display: block;
+  }
+
+  * {
+    font-size: 23px;
+  }
+
+  #first {
+    top: 32vh;
+    right: 21vw;
+  }
+
+  #last {
+    left: 21vw;
+  }
+
+  #bar-one {
+    top: 38.5vh;
+    left: 13vw;
+  }
+
+  #bar-two {
+    top: 51.5vh;
+    right: 13vw;
+  }
+
+  #title {
+    top: 62vh;
+    font-size: 1em;
+  }
+
+  #bar-three {
+    top: 68vh;
+  }
+
+  nav > div {
+    font-size: .618em;
+    line-height: 40px;
+    width: 12vw;
+  }
+
+  #contact-header {
+    top: 10vh;
+  }
+
+  #contact-email,
+  #contact-name {
+    top: 15vh;
+  }
+
+  #contact-message {
+    top: 19vh;
+  }
+
+  #contact-send {
+    top: 23vh;
+  }
+}

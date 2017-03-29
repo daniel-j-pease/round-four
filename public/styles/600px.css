@@ -1,0 +1,40 @@
+@media (min-width:600px) and (max-width:800px){
+
+  .sixHundred {
+    display: block;
+  }
+
+  * {
+    font-size: 23px;
+  }
+
+  #first {
+    right: 15vw;
+    top:35vh;
+  }
+
+  #last {
+    left: 15vw;
+  }
+
+  #bar-one {
+    top: 41.5vh;
+    left: 13vw;
+  }
+
+  #bar-two {
+    right: 13vw;
+  }
+
+  #bar-three {
+    top: 63.5vh;
+  }
+
+  .project-container {
+    margin-bottom: 5vh;
+  }
+  
+  #bio {
+    margin: 7vw 15vw;
+  }
+}

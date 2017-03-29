@@ -8,9 +8,22 @@
     <!-- <link href="https://fonts.googleapis.com/css?family=Expletus+Sans|Raleway" rel="stylesheet"> -->
     <link rel="stylesheet" href="./public/styles/normalize.css">
     <link rel="stylesheet" href="./public/styles/main.css">
-    <link rel="stylesheet" href="./public/styles/tablet.css">
+    <link rel="stylesheet" href="./public/styles/tiny.css">
+    <link rel="stylesheet" href="./public/styles/320px.css">
+    <link rel="stylesheet" href="./public/styles/480px.css">
+    <link rel="stylesheet" href="./public/styles/600px.css">
+    <link rel="stylesheet" href="./public/styles/801px.css">
+    <link rel="stylesheet" href="./public/styles/1025px.css">
+    <link rel="stylesheet" href="./public/styles/1281px.css">
   </head>
   <body>
+    <div class="tiny">tiny</div>
+    <div class="threeTwenty">320</div>
+    <div class="fourEighty">480</div>
+    <div class="sixHundred">600</div>
+    <div class="eightOhOne">801</div>
+    <div class="tenTwentyFive">1025</div>
+    <div class="twelveEightyOne">1281</div>
     <div id="welcome">
       <div id="hamburger">
         <span id="bun1" class="bun"></span>
@@ -26,7 +39,7 @@
       <div>
         <span id="first" class="name not">Daniel</span>
         <span id="last" class="name not">Pease</span>
-        <div id="title">Fullstack Web Developer</div>
+        <span id="title">Fullstack Web Developer</span>
       </div>
       <div id="bar-one" class="bar"></div>
       <div id="bar-two" class="bar"></div>
@@ -50,6 +63,9 @@
         <div id="project-three-container" class="project-container">
           <img id="project-three-image" class="project-image" src="./public/assets/bustleboy-SS.png" alt="bustleboy screenshot">
         </div>
+        <div id="project-four-container" class="project-container">
+          <img id="project-three-image" class="project-image" src="./public/assets/bustleboy-SS.png" alt="bustleboy screenshot">
+        </div>
 				<div id="project-info" class="hidden">
 					<div id="project-close">X</div>
           <ul id="project-one-list" class="project-list hidden">
@@ -67,21 +83,24 @@
             <li>provides a user with an exercise schedule and specific exercise tasks</li>
             <li>fetches from a SQL database</li>
           </ul>
+          <ul id="project-four-list" class="project-list hidden">
+            <li>mobile app built in react-native for iOS</li>
+            <li>provides a user with an exercise schedule and specific exercise tasks</li>
+            <li>fetches from a SQL database</li>
+          </ul>
 					<button id="enter-project" class="info-button">Show me the project</button>
 				</div>
       </div>
     </div>
     <div id="contact">
-      <div id="message">
-        <h1 id="contact-header">get in touch</h1>
-        <form action="" method="POST" enctype="multipart/form-data">
-          <input type="hidden" name="action" value="submit">
-          <input id ="contact-name" type="text" name="name" value="" placeholder="your name" required>
-          <input id="contact-email" type="text" name="email" value="" placeholder="your email" required>
-          <textarea id="contact-message" name="message" placeholder="your message" required></textarea>
-          <input id="contact-send" type="submit" value="send">
-        </form>
-      </div>
+      <h1 id="contact-header">get in touch</h1>
+      <form action="" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="action" value="submit">
+        <input id ="contact-name" type="text" name="name" value="" placeholder="your name" required>
+        <input id="contact-email" type="text" name="email" value="" placeholder="your email" required>
+        <textarea id="contact-message" name="message" placeholder="your message" required></textarea>
+        <input id="contact-send" type="submit" value="send">
+      </form>
     </div>
     <footer>
       <div id="linkedin" class="social"></div>
