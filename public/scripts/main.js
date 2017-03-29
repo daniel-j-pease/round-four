@@ -79,19 +79,18 @@ window.onload = () => {
 
   // scroll to relevant section
   function handleNavClick(e) {
-    console.log('clicked');
     switch (e.target.innerText) {
       case 'Home':
-        scrollTo(homeHeight, 300);
+        body.scrollTop = 0;
         break;
       case 'About':
-        scrollTo(aboutHeight, 300);
+        body.scrollTop = aboutHeight
         break;
       case 'Projects':
-        scrollTo(projectsHeight, 300);
+        body.scrollTop = projectsHeight
         break;
       case 'Contact':
-        scrollTo(contactHeight, 300);
+        body.scrollTop = contactHeight
         break;
     }
   }
