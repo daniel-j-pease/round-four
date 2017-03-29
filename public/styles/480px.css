@@ -11,7 +11,20 @@
     top: 41.5vh;
   }
 
+  #mobile-clue {
+    display: block;
+  }
+
   * {
     font-size: 20px;
+  }
+
+  #bio {
+    margin: 9vw;
+  }
+
+  .project-image {
+    width: 75vw;
+    left: 12.5vw;
   }
 }

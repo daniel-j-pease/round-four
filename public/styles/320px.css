@@ -8,21 +8,40 @@
     display: block;
   }
 
+  #first {
+    top: 36vh;
+  }
+
+  #last {
+    top: 44vh;
+  }
+
+  #bar-one {
+    top: 42.5vh
+  }
+
+  #bar-two {
+    top: 51.5vh;
+  }
+
   nav > div {
     width: 30vw;
   }
 
-  .social {
-    height: 60px;
-    width: 60px;
+  #mobile-clue {
+    display: block;
   }
 
   #bar-three {
     top: 63vh;
   }
 
-  #github {
-    background-image: url('../assets/github.png');
-    left: calc(50vw - 30px);
+  #bio {
+    margin: 9vw;
+  }
+
+  .project-image {
+  	width: 75vw;
+    left: 12.5vw;
   }
 }

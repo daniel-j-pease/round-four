@@ -30,20 +30,11 @@
     top: 63.5vh;
   }
 
-  .social {
-    height: 90px;
-    width: 90px;
+  .project-container {
+    margin-bottom: 5vh;
   }
-
-  #github {
-    left: calc(50vw - 45px);
-  }
-
-  #twitter {
-    right: 10vw;
-  }
-
-  #linkedin {
-    left: 10vw;
+  
+  #bio {
+    margin: 7vw 15vw;
   }
 }

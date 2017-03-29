@@ -5,7 +5,7 @@
   }
 
   * {
-    font-size: 28px;
+    font-size: 23px;
   }
 
   #first {
@@ -42,24 +42,20 @@
     width: 12vw;
   }
 
-  #bio {
-    margin: 4vw;
+  #contact-header {
+    top: 10vh;
   }
 
-  .social {
-    height: 100px;
-    width: 100px;
+  #contact-email,
+  #contact-name {
+    top: 15vh;
   }
 
-  #github {
-    left: calc(50vw - 50px);
+  #contact-message {
+    top: 19vh;
   }
 
-  #twitter {
-    right: 12vw;
-  }
-
-  #linkedin {
-    left: 12vw;
+  #contact-send {
+    top: 23vh;
   }
 }

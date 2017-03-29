@@ -37,9 +37,35 @@
     top: 66.5vh;
   }
 
+  #bio {
+    margin: 7vw 20vw;
+  }
+
   nav > div {
     font-size: .618em;
     line-height: 40px;
     width: 9vw;
+  }
+
+  .project-image {
+    width: 50vw;
+    left: 25vw;
+  }
+
+  #contact-header {
+    top: 10vh;
+  }
+
+  #contact-email,
+  #contact-name {
+    top: 15vh;
+  }
+
+  #contact-message {
+    top: 19vh;
+  }
+
+  #contact-send {
+    top: 23vh;
   }
 }

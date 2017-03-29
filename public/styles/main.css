@@ -104,10 +104,13 @@ nav > div {
 }
 
 #about,
-#portfolio,
 #welcome {
   height: 100vh;
   width: 100vw;
+}
+
+#portfolio: {
+  height: 120vh;
 }
 
 #contact {
@@ -149,7 +152,7 @@ h1 {
   font-size: 1em;
   position: relative;
   top: 20vh;
-  margin: 7vw;
+  margin: 7vw 15vw;
 }
 
 #mobile-clue {
@@ -157,19 +160,17 @@ h1 {
   /*font-family: 'Raleway', sans-serif;*/
   font-size: 1em;
   position: absolute;
-  margin-top: 1vh;
+  display: none;
   text-align: center;
   width: 100vw;
 }
 
-#project-header {
-  margin-top: 4vh;
-}
-
 .project-container {
   height: 20vh;
-  margin-bottom: 7vh;
+  /*margin-bottom: 7vh;*/
+  /*margin:  12.5vw;*/
 
+  margin: 5vw 0 5vw 0;
   opacity: 1;
   transition: opacity .7s ease-in-out;
   -ms-transition: opacity .7s ease-in-out;
@@ -179,10 +180,10 @@ h1 {
 
 .project-image {
   border-radius: 10px;
-	width: 75vw;
+	width: 60vw;
   position: absolute;
   height: 20vh;
-	margin:  12.5vw;
+  left: 20vw;
   z-index: 1;
 }
 
@@ -219,8 +220,7 @@ h1 {
 }
 
 .showInfo {
-  /*display: fixed;*/
-  display: none;
+  display: fixed;
 
 	opacity: 1;
   transition: opacity .7s ease-in-out;
@@ -319,24 +319,24 @@ footer {
   background-size: 100% 100%;
   border-radius: 50px;
   height: 70px;
-  top: calc(385vh);
-  position: absolute;
+  margin-right: calc(16.2vw - 35px);
+  margin-left: calc(16.2vw - 35px);
+  position: relative;
+  top: calc(50% - 35px);
   width: 70px;
+  display: inline-block;
 }
 
 #linkedin {
   background-image: url('../assets/linkedin.png');
-  left: 8vw;
 }
 
 #github {
   background-image: url('../assets/github.png');
-  left: calc(50vw - 35px);
 }
 
 #twitter {
   background-image: url('../assets/twitter.png');
-  right: 8vw;
 }
 
 .tiny,
@@ -347,5 +347,5 @@ footer {
 .tenTwentyFive,
 .twelveEightyOne {
   display: none;
-  position: absolute;
+  position: fixed;
 }
