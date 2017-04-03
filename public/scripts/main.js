@@ -1,7 +1,6 @@
 ('use strict');
 
 window.onload = () => {
-
   // declare node variables (alphebetical unless part of numbered set)
   const about = document.querySelector('#about');
   const aboutHeader = document.querySelector('#about-header');
@@ -48,7 +47,6 @@ window.onload = () => {
   const aboutHeight = viewHeight;
   const projectsHeight = projectHeader.getBoundingClientRect().top;
   const contactHeight = body.scrollHeight;
-  console.log(viewHeight)
 
   // on hamburger click unhide nav with transition
   function handleHamburgerClick() {
@@ -315,7 +313,14 @@ window.onload = () => {
   github.addEventListener('click', handleSocialClick);
   linkedin.addEventListener('click', handleSocialClick);
 
+  window.addEventListener('orientationchange', checkOrientation)
+
   // invoke moveBars and colorizer to dynamically set pallet and bar width
   moveBars();
   colorizer();
+
+  function checkOrientation() {
+    console.log('change')
+    moveBars();
+  }
 };

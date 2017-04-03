@@ -34,6 +34,7 @@
 
   nav > div {
     width: 30vw;
+    line-height: 50px;
   }
 
   #mobile-clue {
@@ -45,11 +46,11 @@
   }
 
   #about-header {
-    top: 12vh;
+    top: 18vh;
   }
 
   #bio {
-    top: 12vh;
+    top: 18vh;
   }
 
   .project-image {

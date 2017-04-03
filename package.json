@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/daniel-j-pease/round-four/issues"
   },
-  "homepage": "https://github.com/daniel-j-pease/round-four#readme"
+  "homepage": "https://github.com/daniel-j-pease/round-four#readme",
+  "dependencies": {
+    "react-native-multi-slider": "^0.3.5"
+  }
 }
