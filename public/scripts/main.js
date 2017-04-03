@@ -44,7 +44,7 @@ window.onload = () => {
   // seize viewport height for purposes of scrolling
   const viewHeight = window.innerHeight;
   const homeHeight = 0;
-  const aboutHeight = viewHeight;
+  const aboutHeight = about.getBoundingClientRect().top
   const projectsHeight = projectHeader.getBoundingClientRect().top;
   const contactHeight = body.scrollHeight;
 
