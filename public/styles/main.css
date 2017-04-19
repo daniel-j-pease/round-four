@@ -139,20 +139,22 @@ h1 {
   margin: 7vw 15vw;
 }
 
+#project-header {
+  top: 0vh;
+}
+
 #mobile-clue {
   color: red;
   /*font-family: 'Raleway', sans-serif;*/
   font-size: 1em;
-  position: absolute;
-  display: none;
+  position: relative;
   text-align: center;
   width: 100vw;
 }
 
 .project-container {
   height: 20vh;
-  /*margin-bottom: 7vh;*/
-  /*margin:  12.5vw;*/
+  position: relative;
 
   margin: 5vw 0 5vw 0;
   opacity: 1;
@@ -165,22 +167,32 @@ h1 {
 .project-image {
   border-radius: 10px;
 	width: 60vw;
-  position: absolute;
+  position: relative;
   height: 20vh;
   left: 20vw;
   z-index: 1;
 }
 
+.project-title {
+  width: auto;
+  text-align: center;
+  font-size: 2.2em;
+  position: relative;
+  top: 5vh;
+}
+
 .project-list {
 	list-style-type: georgian;
-	margin: 15vh 5vw 0vw 10vw;
+	margin: 0 3vw 0vw 10vw;
 	color: red;
 	position: absolute;
 }
 
-.project-list > li {
+ul > li {
+  position: relative;
 	font-size: 1.25em;
-	margin: 2vh 0 2vh 0;
+	margin-bottom: 2vh;
+  top: 10vh;
 }
 
 #project-info {
@@ -188,11 +200,10 @@ h1 {
   top: 0;
 	height: 75vh;
 	width: 80vw;
-	background-color: #fafafa;
-  border-top: 15vh solid black;
-  border-left: 10vw solid black;
-  border-right: 10vw solid black;
-  border-bottom: 15vh solid black;
+  border-top: 15vh solid;
+  border-left: 10vw solid;
+  border-right: 10vw solid;
+  border-bottom: 15vh solid;
 }
 
 .hidden {
@@ -220,18 +231,19 @@ h1 {
 	left: calc(80vw - 8vh);
 	width: 8vh;
 	color: #fafafa;
-	background-color: black;
 	text-align: center;
 }
 
-.info-button {
-	margin-bottom: 3vh;
-	width: 65vw;
-	height: 10vw;
-	background-color: red;
-	position: relative;
-	top: 60vh;
-	left: 7.5vw;
+#enter-project {
+  background-color: red;
+  bottom: 3vh;
+  border-radius: 25px;
+  border: none;
+  height: 8vw;
+  left: 20vw;
+  margin-bottom: 3vh;
+  position: absolute;
+  width: 40vw;
 }
 
 input,
@@ -254,7 +266,6 @@ textarea {
   color: #6C5B7B;
   display: block;
   /*font-family: 'Raleway', sans-serif;*/
-  /*position: absolute;*/
   position: relative;
   text-align: center;
   top: 15vh;
@@ -283,7 +294,6 @@ textarea {
 
 #contact-send {
   background-color: #355C7D;
-  /*position: relative;*/
   color: #F8B195;
   left: 42.5vw;
   line-height: 5vh;

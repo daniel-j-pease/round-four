@@ -27,4 +27,13 @@
     width: 75vw;
     left: 12.5vw;
   }
+  
+  .project-list {
+    top: 7vh;
+  }
+
+  #enter-project {
+    height: 8vh;
+    width: 50vw;
+  }
 }

@@ -38,7 +38,7 @@
   }
 
   #mobile-clue {
-    display: block;
+    /*display: block;*/
   }
 
   #bio {
@@ -58,7 +58,12 @@
     left: 12.5vw;
   }
 
-  .red {
-    background-color: red;
+  .project-list {
+    top: 7vh;
+  }
+
+  #enter-project {
+    height: 8vh;
+    width: 50vw;
   }
 }

@@ -18,6 +18,7 @@ window.onload = () => {
   const contactName = document.querySelector('#contact-name');
   const contactMessage = document.querySelector('#contact-message');
   const contactSend = document.querySelector('#contact-send');
+  const enterProject = document.querySelector('#enter-project');
   const footer = document.querySelector('footer');
   const github = document.querySelector('#github');
   const hamburger = document.getElementById('hamburger');
@@ -139,6 +140,8 @@ window.onload = () => {
     projectFour.setAttribute('class', 'project-container hidden');
     projectHeader.setAttribute('class', 'hidden');
     mobileClue.setAttribute('class', 'hidden');
+    hamburger.setAttribute('class', 'hidden');
+    hamburger.removeEventListener('click', handleHamburgerClick)
 
     //hide contact form
     contactName.setAttribute('class', 'hidden');
@@ -181,6 +184,8 @@ window.onload = () => {
     contactSend.setAttribute('class', '');
     contactEmail.setAttribute('class', '');
     contactMessage.setAttribute('class', '');
+    hamburger.setAttribute('class', '');
+    hamburger.addEventListener('click', handleHamburgerClick);
   }
 
   // set bar width to cover distance between beginning of opposite span
@@ -253,6 +258,9 @@ window.onload = () => {
     portfolio.style.backgroundColor = colors[pallets[picker]].background;
     contact.style.backgroundColor = colors[pallets[picker]].background;
     body.style.backgroundColor = colors[pallets[picker]].background;
+    projectInfo.style.backgroundColor = colors[pallets[picker]].background;
+    projectInfo.style.borderColor = colors[pallets[picker]].background;
+    projectClose.style.backgroundColor = colors[pallets[picker]].background;
 
     // set navs, bars, headers to given pallet's barsHeader color
     nav.style.backgroundColor = colors[pallets[picker]].barsHeaders;
@@ -267,10 +275,9 @@ window.onload = () => {
     barThree.style.backgroundColor = colors[pallets[picker]].barsHeaders;
 
     // set text elements to given pallet's text color
-    // remember to standardize li color
-    // projectOneList.style.color = colors[pallets[picker]].text;
-    // projectTwoList.style.color = colors[pallets[picker]].text;
-    // projectThreeList.style.color = colors[pallets[picker]].text;
+    projectOneList.style.color = colors[pallets[picker]].text;
+    projectTwoList.style.color = colors[pallets[picker]].text;
+    projectThreeList.style.color = colors[pallets[picker]].text;
     contactSend.style.color = colors[pallets[picker]].text;
     nav.style.color = colors[pallets[picker]].text;
     bio.style.color = colors[pallets[picker]].text;
@@ -278,13 +285,16 @@ window.onload = () => {
     last.style.color = colors[pallets[picker]].text;
     mobileClue.style.color = colors[pallets[picker]].text;
     title.style.color = colors[pallets[picker]].text;
+    enterProject.style.color = colors[pallets[picker]].text;
 
     // set footer elements given pallet's footer color
-    github.style.backgroundColor = colors[pallets[picker]].footer;
     contactSend.style.backgroundColor = colors[pallets[picker]].footer;
+    enterProject.style.backgroundColor = colors[pallets[picker]].footer;
+    projectClose.style.color = colors[pallets[picker]].footer;
     footer.style.backgroundColor = colors[pallets[picker]].footer;
-    twitter.style.backgroundColor = colors[pallets[picker]].footer;
+    github.style.backgroundColor = colors[pallets[picker]].footer;
     linkedin.style.backgroundColor = colors[pallets[picker]].footer;
+    twitter.style.backgroundColor = colors[pallets[picker]].footer;
   }
 
   function handleSocialClick(e) {
@@ -320,7 +330,6 @@ window.onload = () => {
   colorizer();
 
   function checkOrientation() {
-    console.log('change')
     moveBars();
   }
 };

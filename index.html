@@ -93,33 +93,45 @@
       </div>
       <div id="project-info" class="hidden">
         <div id="project-close">X</div>
-        <ul id="project-one-list" class="project-list hidden">
-          <li>homage to 80’s arcade classic Space Invaders</li>
-          <li>applies jQuery to facilitate DOM manipulation and traversal</li>
-          <li>built in HTML5 and styled with CSS</li>
-        </ul>
-        <ul id="project-two-list" class="project-list hidden">
-          <li>social media platform to facilitate organization of pickup soccer games</li>
-          <li>mongoDB implemented to mimic demands of scalable database</li>
-          <li>developed in node with node-fetch, express, ejs, bcryptjs and others</li>
-        </ul>
-        <ul id="project-three-list" class="project-list hidden">
-          <li>mobile app built in react-native for iOS</li>
-          <li>provides a user with an exercise schedule and specific exercise tasks</li>
-          <li>fetches from a SQL database</li>
-        </ul>
-        <ul id="project-four-list" class="project-list hidden">
-          <li>mobile app built in react-native for iOS</li>
-          <li>fully integrated Plaid API tracks user transactions in real time</li>
-          <li>fetches from a SQL database</li>
-        </ul>
+        <div id="project-one-list" class="project-list hidden">
+          <div class="project-title">Bustle Boy</div>
+          <ul>
+            <li>homage to 80’s arcade classic Space Invaders</li>
+            <li>applies jQuery to facilitate DOM manipulation and traversal</li>
+            <li>built in HTML5 and styled with CSS</li>
+          </ul>
+        </div>
+        <div id="project-two-list" class="project-list hidden">
+          <div class="project-title">soccerFinder</div>
+          <ul>
+            <li>social media platform to facilitate organization of pickup soccer games</li>
+            <li>mongoDB implemented to mimic demands of scalable database</li>
+            <li>developed in node with node-fetch, express, ejs, bcryptjs and others</li>
+          </ul>
+        </div>
+        <div id="project-three-list" class="project-list hidden">
+          <div class="project-title">Ice Cream Lifts</div>
+          <ul>
+            <li>mobile app built in react-native for iOS</li>
+            <li>provides a user with an exercise schedule and specific exercise tasks</li>
+            <li>fetches from a SQL database</li>
+          </ul>
+        </div>
+        <div id="project-four-list" class="project-list hidden">
+          <div class="project-title">My Two Cents</div>
+          <ul>
+            <li>mobile app built in react-native for iOS</li>
+            <li>fully integrated Plaid API tracks user transactions in real time</li>
+            <li>fetches from a SQL database</li>
+          </ul>
+        </div>
         <button id="enter-project" class="info-button">Show me the project</button>
       </div>
     </div>
   </div>
   <div id="contact">
     <h1 id="contact-header">get in touch</h1>
-    <form action="" method="POST" enctype="multipart/form-data">
+    <form action="http://formspree.io/dan_pease_developer@yahoo.com" method="POST" enctype="multipart/form-data">
       <input type="hidden" name="action" value="submit">
       <input id="contact-name" type="text" name="name" value="" placeholder="your name" required>
       <input id="contact-email" type="text" name="email" value="" placeholder="your email" required>

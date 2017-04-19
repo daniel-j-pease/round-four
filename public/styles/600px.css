@@ -33,8 +33,17 @@
   .project-container {
     margin-bottom: 5vh;
   }
-  
+
   #bio {
     margin: 7vw 15vw;
+  }
+
+  .project-list {
+    top: 7vh;
+  }
+
+  #enter-project {
+    height: 8vh;
+    width: 50vw;
   }
 }
