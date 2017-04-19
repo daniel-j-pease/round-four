@@ -18,11 +18,16 @@ window.onload = () => {
   const contactName = document.querySelector('#contact-name');
   const contactMessage = document.querySelector('#contact-message');
   const contactSend = document.querySelector('#contact-send');
+  const enterProject = document.querySelector('#enter-project');
   const footer = document.querySelector('footer');
   const github = document.querySelector('#github');
   const hamburger = document.getElementById('hamburger');
   const mobileClue = document.getElementById('mobile-clue');
   const nav = document.querySelector('nav');
+  const navHome = document.querySelector('#nav-home');
+  const navAbout = document.querySelector('#nav-about');
+  const navProjects = document.querySelector('#nav-projects');
+  const navContact = document.querySelector('#nav-contact');
   const projects = document.querySelector('#projects');
   const projectClose = document.querySelector('#project-close');
   const projectHeader = document.querySelector('#project-header');
@@ -39,10 +44,10 @@ window.onload = () => {
 
   // seize viewport height for purposes of scrolling
   const viewHeight = window.innerHeight;
-  const aboutHeight = viewHeight;
-  const contactHeight = body.scrollHeight;
   const homeHeight = 0;
-  const projectsHeight = viewHeight * 2;
+  const aboutHeight = about.getBoundingClientRect().top
+  const projectsHeight = projectHeader.getBoundingClientRect().top;
+  const contactHeight = body.scrollHeight;
 
   // on hamburger click unhide nav with transition
   function handleHamburgerClick() {
@@ -54,10 +59,25 @@ window.onload = () => {
   function hideNav(e) {
     if (e.target !== hamburger && e.srcElement.nodeName !== 'SPAN') {
       nav.className = '';
+      clearColor();
     }
     if (e.target.className === 'not') {
       nav.className = '';
+      clearColor();
     }
+  }
+
+  // 500ms after hiding the nav, remove highlight from nav items
+  function clearColor(ele) {
+    let highlight = setTimeout(
+      () => {
+        navHome.className = '';
+        navAbout.className = '';
+        navProjects.className = '';
+        navContact.className = '';
+      },
+      500
+    );
   }
 
   // scrolls in response to nav selection
@@ -82,15 +102,19 @@ window.onload = () => {
     switch (e.target.innerText) {
       case 'Home':
         body.scrollTop = 0;
+        e.target.setAttribute('class', 'red');
         break;
       case 'About':
-        body.scrollTop = aboutHeight
+        document.body.scrollTop = aboutHeight;
+        e.target.setAttribute('class', 'red');
         break;
       case 'Projects':
-        body.scrollTop = projectsHeight
+        document.body.scrollTop = projectsHeight;
+        e.target.setAttribute('class', 'red');
         break;
       case 'Contact':
-        body.scrollTop = contactHeight
+        document.body.scrollTop = contactHeight;
+        e.target.setAttribute('class', 'red');
         break;
     }
   }
@@ -116,6 +140,8 @@ window.onload = () => {
     projectFour.setAttribute('class', 'project-container hidden');
     projectHeader.setAttribute('class', 'hidden');
     mobileClue.setAttribute('class', 'hidden');
+    hamburger.setAttribute('class', 'hidden');
+    hamburger.removeEventListener('click', handleHamburgerClick)
 
     //hide contact form
     contactName.setAttribute('class', 'hidden');
@@ -158,6 +184,8 @@ window.onload = () => {
     contactSend.setAttribute('class', '');
     contactEmail.setAttribute('class', '');
     contactMessage.setAttribute('class', '');
+    hamburger.setAttribute('class', '');
+    hamburger.addEventListener('click', handleHamburgerClick);
   }
 
   // set bar width to cover distance between beginning of opposite span
@@ -230,6 +258,9 @@ window.onload = () => {
     portfolio.style.backgroundColor = colors[pallets[picker]].background;
     contact.style.backgroundColor = colors[pallets[picker]].background;
     body.style.backgroundColor = colors[pallets[picker]].background;
+    projectInfo.style.backgroundColor = colors[pallets[picker]].background;
+    projectInfo.style.borderColor = colors[pallets[picker]].background;
+    projectClose.style.backgroundColor = colors[pallets[picker]].background;
 
     // set navs, bars, headers to given pallet's barsHeader color
     nav.style.backgroundColor = colors[pallets[picker]].barsHeaders;
@@ -244,10 +275,9 @@ window.onload = () => {
     barThree.style.backgroundColor = colors[pallets[picker]].barsHeaders;
 
     // set text elements to given pallet's text color
-    // remember to standardize li color
-    // projectOneList.style.color = colors[pallets[picker]].text;
-    // projectTwoList.style.color = colors[pallets[picker]].text;
-    // projectThreeList.style.color = colors[pallets[picker]].text;
+    projectOneList.style.color = colors[pallets[picker]].text;
+    projectTwoList.style.color = colors[pallets[picker]].text;
+    projectThreeList.style.color = colors[pallets[picker]].text;
     contactSend.style.color = colors[pallets[picker]].text;
     nav.style.color = colors[pallets[picker]].text;
     bio.style.color = colors[pallets[picker]].text;
@@ -255,22 +285,25 @@ window.onload = () => {
     last.style.color = colors[pallets[picker]].text;
     mobileClue.style.color = colors[pallets[picker]].text;
     title.style.color = colors[pallets[picker]].text;
+    enterProject.style.color = colors[pallets[picker]].text;
 
     // set footer elements given pallet's footer color
-    github.style.backgroundColor = colors[pallets[picker]].footer;
     contactSend.style.backgroundColor = colors[pallets[picker]].footer;
+    enterProject.style.backgroundColor = colors[pallets[picker]].footer;
+    projectClose.style.color = colors[pallets[picker]].footer;
     footer.style.backgroundColor = colors[pallets[picker]].footer;
-    twitter.style.backgroundColor = colors[pallets[picker]].footer;
+    github.style.backgroundColor = colors[pallets[picker]].footer;
     linkedin.style.backgroundColor = colors[pallets[picker]].footer;
+    twitter.style.backgroundColor = colors[pallets[picker]].footer;
   }
 
   function handleSocialClick(e) {
-    if (e.target.id === "twitter") {
-      window.open("https://twitter.com/realdanpease", "_blank");
-    } else if (e.target.id === "github") {
-      window.open("https://github.com/daniel-j-pease", "_blank");
+    if (e.target.id === 'twitter') {
+      window.open('https://twitter.com/realdanpease', '_blank');
+    } else if (e.target.id === 'github') {
+      window.open('https://github.com/daniel-j-pease', '_blank');
     } else {
-      window.open("https://www.linkedin.com/in/daniel-pease", "_blank");
+      window.open('https://www.linkedin.com/in/daniel-pease', '_blank');
     }
   }
 
@@ -290,7 +323,13 @@ window.onload = () => {
   github.addEventListener('click', handleSocialClick);
   linkedin.addEventListener('click', handleSocialClick);
 
+  window.addEventListener('orientationchange', checkOrientation)
+
   // invoke moveBars and colorizer to dynamically set pallet and bar width
   moveBars();
   colorizer();
+
+  function checkOrientation() {
+    moveBars();
+  }
 };

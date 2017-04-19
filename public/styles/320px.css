@@ -9,35 +9,36 @@
   }
 
   #first {
-    top: 32vh;
+    top: 30vh;
   }
 
   #last {
-    top: 40vh;
+    top: 38vh;
   }
 
   #title {
-    top: 55vh;
+    top: 54vh;
   }
 
   #bar-one {
-    top: 37.5vh
+    top: 36.5vh
   }
 
   #bar-two {
-    top: 47.5vh;
+    top: 45.5vh;
   }
 
   #bar-three {
-    top: 59vh;
+    top: 58vh;
   }
 
   nav > div {
     width: 30vw;
+    line-height: 50px;
   }
 
   #mobile-clue {
-    display: block;
+    /*display: block;*/
   }
 
   #bio {
@@ -45,15 +46,24 @@
   }
 
   #about-header {
-    top: 16vh;
+    top: 18vh;
   }
 
   #bio {
-    top: 16vh;
+    top: 18vh;
   }
 
   .project-image {
   	width: 75vw;
     left: 12.5vw;
+  }
+
+  .project-list {
+    top: 7vh;
+  }
+
+  #enter-project {
+    height: 8vh;
+    width: 50vw;
   }
 }
