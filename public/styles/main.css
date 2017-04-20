@@ -50,6 +50,7 @@ nav {
 
 .navClicked {
   background-color: #fafafa;
+  color: #002e63;
 }
 
 nav > div {
