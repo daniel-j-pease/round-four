@@ -102,33 +102,20 @@ window.onload = () => {
     switch (e.target.innerText) {
       case 'Home':
         body.scrollTop = 0;
-        e.target.setAttribute('class', 'red');
+        e.target.setAttribute('class', 'navClicked');
         break;
       case 'About':
-        document.body.scrollTop = aboutHeight;
-        e.target.setAttribute('class', 'red');
+        body.scrollTop = aboutHeight;
+        e.target.setAttribute('class', 'navClicked');
         break;
       case 'Projects':
-        document.body.scrollTop = projectsHeight;
-        e.target.setAttribute('class', 'red');
+        body.scrollTop = projectsHeight;
+        e.target.setAttribute('class', 'navClicked');
         break;
       case 'Contact':
-        document.body.scrollTop = contactHeight;
-        e.target.setAttribute('class', 'red');
+        body.scrollTop = contactHeight;
+        e.target.setAttribute('class', 'navClicked');
         break;
-    }
-  }
-
-  // remove?
-  function checkHamburger() {
-    if (document.body.scrollTop > viewHeight * 3) {
-      hamburger.childNodes[1].style.backgroundColor = '#355C7D';
-      hamburger.childNodes[3].style.backgroundColor = '#355C7D';
-      hamburger.childNodes[5].style.backgroundColor = '#355C7D';
-    } else {
-      hamburger.childNodes[1].style.backgroundColor = '';
-      hamburger.childNodes[3].style.backgroundColor = '';
-      hamburger.childNodes[5].style.backgroundColor = '';
     }
   }
 
@@ -312,7 +299,6 @@ window.onload = () => {
   nav.addEventListener('click', handleNavClick);
   body.addEventListener('click', hideNav);
 
-  // window.addEventListener('scroll', checkHamburger);
   window.addEventListener('resize', moveBars);
   projectOne.addEventListener('click', handleProjectClick);
   projectTwo.addEventListener('click', handleProjectClick);

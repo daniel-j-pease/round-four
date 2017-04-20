@@ -48,6 +48,10 @@ nav {
   transition: max-height 0.5s ease-out 0s;
 }
 
+.navClicked {
+  background-color: #fafafa;
+}
+
 nav > div {
   font-size: 1em;
   line-height: 35px;
