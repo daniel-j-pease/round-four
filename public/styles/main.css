@@ -237,6 +237,7 @@ ul > li {
 	width: 8vh;
 	color: #fafafa;
 	text-align: center;
+  z-index: 1;
 }
 
 #enter-project {

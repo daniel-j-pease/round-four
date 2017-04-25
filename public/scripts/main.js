@@ -99,27 +99,26 @@ window.onload = () => {
 
   // scroll to relevant section
   function handleNavClick(e) {
+    e.target.setAttribute('class', 'navClicked');
     switch (e.target.innerText) {
       case 'Home':
         body.scrollTop = 0;
-        e.target.setAttribute('class', 'navClicked');
         break;
       case 'About':
         body.scrollTop = aboutHeight;
-        e.target.setAttribute('class', 'navClicked');
         break;
       case 'Projects':
         body.scrollTop = projectsHeight;
-        e.target.setAttribute('class', 'navClicked');
         break;
       case 'Contact':
         body.scrollTop = contactHeight;
-        e.target.setAttribute('class', 'navClicked');
         break;
     }
   }
 
   function handleProjectClick(e) {
+    let mobile = document.querySelectorAll('[data="mobile"]')[0];
+
     //hide all project containers, project header, and mobile-clue
     projectOne.setAttribute('class', 'project-container hidden');
     projectTwo.setAttribute('class', 'project-container hidden');
@@ -140,16 +139,17 @@ window.onload = () => {
     // reveal info div with relevant info list
     if (e.target.attributes[0].nodeValue == `project-one-image`) {
       projectInfo.setAttribute('class', 'showInfo');
-      projectOneList.setAttribute('class', 'project-list');
+      projectOneList.setAttribute('class', 'project-list selected');
     } else if (e.target.attributes[0].nodeValue == `project-two-image`) {
       projectInfo.setAttribute('class', 'showInfo');
-      projectTwoList.setAttribute('class', 'project-list');
+      projectTwoList.setAttribute('class', 'project-list selected');
     } else if (e.target.attributes[0].nodeValue == `project-three-image`) {
       projectInfo.setAttribute('class', 'showInfo');
-      projectThreeList.setAttribute('class', 'project-list');
+      projectThreeList.setAttribute('class', 'project-list selected');
+      enterProject.innerHTML = `Ask for an in-person demo!`
     } else if (e.target.attributes[0].nodeValue == `project-four-image`) {
       projectInfo.setAttribute('class', 'showInfo');
-      projectFourList.setAttribute('class', 'project-list');
+      projectFourList.setAttribute('class', 'project-list selected');
     }
   }
 
@@ -173,6 +173,7 @@ window.onload = () => {
     contactMessage.setAttribute('class', '');
     hamburger.setAttribute('class', '');
     hamburger.addEventListener('click', handleHamburgerClick);
+    enterProject.innerHTML = 'Show me the project!'
   }
 
   // set bar width to cover distance between beginning of opposite span
@@ -265,6 +266,7 @@ window.onload = () => {
     projectOneList.style.color = colors[pallets[picker]].text;
     projectTwoList.style.color = colors[pallets[picker]].text;
     projectThreeList.style.color = colors[pallets[picker]].text;
+    projectFourList.style.color = colors[pallets[picker]].text;
     contactSend.style.color = colors[pallets[picker]].text;
     nav.style.color = colors[pallets[picker]].text;
     bio.style.color = colors[pallets[picker]].text;
@@ -294,6 +296,23 @@ window.onload = () => {
     }
   }
 
+  function handleEnterProjectClick(e) {
+    let selected = document.querySelectorAll('.selected')[0].firstElementChild.innerHTML;
+    switch (selected) {
+      case 'BustleBoy':
+        window.open('https://daniel-j-pease.github.io/bustleBoy', '_blank');
+        break;
+      case 'soccerFinder':
+        window.open('https://ghostly-shadow-26256.herokuapp.com', '_blank');
+        break;
+      case 'Ice Cream Lifts':
+        break;
+      case 'My Two Cents':
+      window.open('http://www.mytwocents.nyc/', '_blank');
+        break;
+    }
+  }
+
   // assign all event listners
   hamburger.addEventListener('click', handleHamburgerClick);
   nav.addEventListener('click', handleNavClick);
@@ -305,6 +324,7 @@ window.onload = () => {
   projectThree.addEventListener('click', handleProjectClick);
   projectFour.addEventListener('click', handleProjectClick);
   projectClose.addEventListener('click', handleProjectClose);
+  enterProject.addEventListener('click', handleEnterProjectClick);
   twitter.addEventListener('click', handleSocialClick);
   github.addEventListener('click', handleSocialClick);
   linkedin.addEventListener('click', handleSocialClick);
