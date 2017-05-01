@@ -5,41 +5,27 @@
   }
 
   * {
-    font-size: 23px;
+    font-size: 32px;
   }
 
   #first {
-    font-size: 148px;
-    top: 30vh;
-    right: 21vw;
+    right: 25vw;
   }
 
   #last {
-    font-size: 148px;
-    left: 21vw;
-  }
-
-  #bar-one {
-    top: 36.5vh;
-    left: 13vw;
-  }
-
-  #bar-two {
-    top: 51.5vh;
-    right: 13vw;
+    left: 25vw;
   }
 
   #title {
-    font-size: 1em;
-    top: 62vh;
+    top: 68vh;
   }
 
   #bar-three {
-    top: 67.5vh;
+    top: 76.5vh;
   }
 
-  #bio {
-    /*margin: 7vw 15vw;*/
+  .project-list {
+    font-size: 1em;
   }
 
   nav > div {
@@ -48,9 +34,25 @@
     width: 12vw;
   }
 
+  #about-header {
+    top: 15vh;
+  }
+
+  #bio {
+    top: 10vh;
+  }
+
   .project-image {
     width: 50vw;
     left: 25vw;
+  }
+
+  ul > li {
+    font-size: 1em;
+  }
+
+  #enter-project {
+    bottom: 5vh;
   }
 
   #contact-header {
@@ -66,7 +68,22 @@
     top: 19vh;
   }
 
+  #contact-email,
+  #contact-name,
+  #contact-message {
+    font-size: 26px;
+  }
+
   #contact-send {
     top: 23vh;
   }
+
+  #linkedin {
+    left: 10vw;
+  }
+
+  #twitter {
+    right: 10vw;
+  }
+
 }

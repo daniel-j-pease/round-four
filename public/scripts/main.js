@@ -45,7 +45,7 @@ window.onload = () => {
   // seize viewport height for purposes of scrolling
   const viewHeight = window.innerHeight;
   const homeHeight = 0;
-  const aboutHeight = about.getBoundingClientRect().top
+  const aboutHeight = about.getBoundingClientRect().top;
   const projectsHeight = projectHeader.getBoundingClientRect().top;
   const contactHeight = body.scrollHeight;
 
@@ -69,32 +69,26 @@ window.onload = () => {
 
   // 500ms after hiding the nav, remove highlight from nav items
   function clearColor(ele) {
-    let highlight = setTimeout(
-      () => {
-        navHome.className = '';
-        navAbout.className = '';
-        navProjects.className = '';
-        navContact.className = '';
-      },
-      500
-    );
+    let highlight = setTimeout(() => {
+      navHome.className = '';
+      navAbout.className = '';
+      navProjects.className = '';
+      navContact.className = '';
+    }, 500);
   }
 
   // scrolls in response to nav selection
   function scrollTo(target, duration) {
     const distance = target - document.body.scrollTop;
     const perTick = distance / duration * 10;
-    const scroller = setInterval(
-      () => {
-        if (duration <= 0 || document.body.scrollTop === target) {
-          clearInterval(scroller);
-        } else {
-          duration -= 10;
-          document.body.scrollTop += perTick;
-        }
-      },
-      10
-    );
+    const scroller = setInterval(() => {
+      if (duration <= 0 || document.body.scrollTop === target) {
+        clearInterval(scroller);
+      } else {
+        duration -= 10;
+        document.body.scrollTop += perTick;
+      }
+    }, 10);
   }
 
   // scroll to relevant section
@@ -105,6 +99,7 @@ window.onload = () => {
         body.scrollTop = 0;
         break;
       case 'About':
+        console.log(aboutHeight);
         body.scrollTop = aboutHeight;
         break;
       case 'Projects':
@@ -127,7 +122,7 @@ window.onload = () => {
     projectHeader.setAttribute('class', 'hidden');
     mobileClue.setAttribute('class', 'hidden');
     hamburger.setAttribute('class', 'hidden');
-    hamburger.removeEventListener('click', handleHamburgerClick)
+    hamburger.removeEventListener('click', handleHamburgerClick);
 
     //hide contact form
     contactName.setAttribute('class', 'hidden');
@@ -138,17 +133,17 @@ window.onload = () => {
 
     // reveal info div with relevant info list
     if (e.target.attributes[0].nodeValue == `project-one-image`) {
-      projectInfo.setAttribute('class', 'showInfo');
+      projectInfo.setAttribute('class', 'show-info');
       projectOneList.setAttribute('class', 'project-list selected');
     } else if (e.target.attributes[0].nodeValue == `project-two-image`) {
-      projectInfo.setAttribute('class', 'showInfo');
+      projectInfo.setAttribute('class', 'show-info');
       projectTwoList.setAttribute('class', 'project-list selected');
     } else if (e.target.attributes[0].nodeValue == `project-three-image`) {
-      projectInfo.setAttribute('class', 'showInfo');
+      projectInfo.setAttribute('class', 'show-info');
       projectThreeList.setAttribute('class', 'project-list selected');
-      enterProject.innerHTML = `Ask for an in-person demo!`
+      enterProject.innerHTML = `Ask for an in-person demo!`;
     } else if (e.target.attributes[0].nodeValue == `project-four-image`) {
-      projectInfo.setAttribute('class', 'showInfo');
+      projectInfo.setAttribute('class', 'show-info');
       projectFourList.setAttribute('class', 'project-list selected');
     }
   }
@@ -173,26 +168,42 @@ window.onload = () => {
     contactMessage.setAttribute('class', '');
     hamburger.setAttribute('class', '');
     hamburger.addEventListener('click', handleHamburgerClick);
-    enterProject.innerHTML = 'Show me the project!'
+    enterProject.innerHTML = 'Show me the project!';
   }
 
   // set bar width to cover distance between beginning of opposite span
   function moveBars() {
-    let widthOne = first.getBoundingClientRect().left -
+    let widthOne =
+      first.getBoundingClientRect().left -
       last.getBoundingClientRect().left -
       window.innerWidth / 55;
-    let widthTwo = first.getBoundingClientRect().right -
+    let widthTwo =
+      first.getBoundingClientRect().right -
       last.getBoundingClientRect().right -
       window.innerWidth / 55;
-    let widthThree = title.getBoundingClientRect().right -
-      title.getBoundingClientRect().left;
+    let widthThree =
+      title.getBoundingClientRect().right - title.getBoundingClientRect().left;
 
     let leftOne = last.getBoundingClientRect().left;
     let rightTwo = window.innerWidth - first.getBoundingClientRect().right;
     let leftThree = window.innerWidth / 2 - widthThree / 2;
+
+    let barOneTop =
+      (first.getBoundingClientRect().bottom -
+        first.getBoundingClientRect().top) /
+        2 +
+      first.getBoundingClientRect().top;
+
+    let barTwoTop =
+      (last.getBoundingClientRect().bottom - last.getBoundingClientRect().top) /
+        2 +
+      last.getBoundingClientRect().top;
+
     barOne.style.width = `${widthOne}px`;
     barTwo.style.width = `${widthTwo}px`;
     barThree.style.width = `${widthThree}px`;
+    barOne.style.top = `${barOneTop}px`;
+    barTwo.style.top = `${barTwoTop}px`;
 
     barOne.style.left = `${leftOne}px`;
     barTwo.style.right = `${rightTwo}px`;
@@ -297,7 +308,8 @@ window.onload = () => {
   }
 
   function handleEnterProjectClick(e) {
-    let selected = document.querySelectorAll('.selected')[0].firstElementChild.innerHTML;
+    let selected = document.querySelectorAll('.selected')[0].firstElementChild
+      .innerHTML;
     switch (selected) {
       case 'BustleBoy':
         window.open('https://daniel-j-pease.github.io/bustleBoy', '_blank');
@@ -308,8 +320,14 @@ window.onload = () => {
       case 'Ice Cream Lifts':
         break;
       case 'My Two Cents':
-      window.open('http://www.mytwocents.nyc/', '_blank');
+        window.open('http://www.mytwocents.nyc/', '_blank');
         break;
+    }
+  }
+
+  function escProject(e) {
+    if (e.which === 27) {
+      handleProjectClose();
     }
   }
 
@@ -319,6 +337,7 @@ window.onload = () => {
   body.addEventListener('click', hideNav);
 
   window.addEventListener('resize', moveBars);
+  window.addEventListener('keydown', escProject);
   projectOne.addEventListener('click', handleProjectClick);
   projectTwo.addEventListener('click', handleProjectClick);
   projectThree.addEventListener('click', handleProjectClick);
@@ -329,13 +348,34 @@ window.onload = () => {
   github.addEventListener('click', handleSocialClick);
   linkedin.addEventListener('click', handleSocialClick);
 
-  window.addEventListener('orientationchange', checkOrientation)
+  window.addEventListener('orientationchange', checkOrientation);
 
   // invoke moveBars and colorizer to dynamically set pallet and bar width
   moveBars();
-  colorizer();
+  // colorizer();
 
   function checkOrientation() {
     moveBars();
   }
+
+  function testFunctions() {
+    const testHeight1 =
+      first.getBoundingClientRect().bottom - first.getBoundingClientRect().top;
+    const testHeight2 =
+      last.getBoundingClientRect().bottom - last.getBoundingClientRect().top;
+
+    console.log(
+      'testHeight1',
+      testHeight1 / viewHeight,
+      first.getBoundingClientRect().top / viewHeight
+    );
+    console.log(
+      'testHeight2',
+      testHeight2 / viewHeight,
+      last.getBoundingClientRect().top / viewHeight
+    );
+    console.log(first);
+  }
+
+  testFunctions();
 };

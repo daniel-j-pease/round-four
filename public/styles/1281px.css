@@ -8,43 +8,18 @@
     font-size: 40px;
   }
 
-  #first {
-    top: 32vh;
-    right: 21vw;
-  }
-
-  #last {
-    top:44vh;
-    left: 21vw;
-  }
-
-  #bar-one {
-    top: 38.5vh;
-    left: 13vw;
-  }
-
-  #bar-two {
-    top: 52.5vh;
-    right: 13vw;
-  }
-
-  #title {
-    font-size: 1em;
-    top: 62vh;
-  }
-
-  #bar-three {
-    top: 66.5vh;
-  }
-
-  #bio {
-    margin: 7vw 20vw;
-  }
-
   nav > div {
     font-size: .618em;
     line-height: 40px;
     width: 9vw;
+  }
+
+  #title {
+    top: 68vh;
+  }
+
+  #bar-three {
+    top: 78.5vh;
   }
 
   .project-image {
@@ -52,7 +27,25 @@
     left: 25vw;
   }
 
+  #about-header {
+    top: 10vh;
+  }
+
+  #bio {
+    top: 5vh
+  }
+
+  ul > li,
+  #bio {
+    font-size: 1em;
+  }
+
+  #enter-project {
+    bottom: 0;
+  }
+
   #contact-header {
+    /*font-size: 40px;*/
     top: 10vh;
   }
 
@@ -65,7 +58,22 @@
     top: 19vh;
   }
 
+  #contact-email,
+  #contact-name,
+  #contact-message {
+    font-size: 20px;
+  }
+
   #contact-send {
-    top: 23vh;
+    font-size: 25px;
+    top: 21vh;
+  }
+
+  #linkedin {
+    left: 20vw;
+  }
+
+  #twitter {
+    right: 20vw;
   }
 }

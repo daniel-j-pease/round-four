@@ -1,68 +1,28 @@
 @media (min-width:320px) and (max-width:479px){
 
   * {
-    font-size: 17px;
+    /*font-size: 16px;*/
   }
 
   .threeTwenty {
     display: block;
   }
 
-  #first {
-    top: 30vh;
-  }
-
-  #last {
-    top: 38vh;
-  }
-
-  #title {
-    top: 54vh;
-  }
-
-  #bar-one {
-    top: 36.5vh
-  }
-
-  #bar-two {
-    top: 45.5vh;
-  }
-
-  #bar-three {
-    top: 58vh;
-  }
-
   nav > div {
-    width: 30vw;
-    line-height: 50px;
+    width: 20vw;
   }
 
   #mobile-clue {
-    /*display: block;*/
+    display: block;
   }
 
-  #bio {
-    margin: 9vw;
-  }
-
-  #about-header {
-    top: 18vh;
-  }
-
-  #bio {
-    top: 18vh;
-  }
-
-  .project-image {
-  	width: 75vw;
-    left: 12.5vw;
-  }
 
   .project-list {
     top: 7vh;
   }
 
   #enter-project {
+    bottom: 0;
     height: 8vh;
     width: 50vw;
   }

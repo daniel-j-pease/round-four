@@ -1,39 +1,31 @@
 @media (min-width:480px) and (max-width:599px) {
+
+  * {
+    font-size: 20px;
+  }
+
   .fourEighty{
     display: block;
   }
 
-  #first {
-    top: 35vh;
-  }
-
-  #bar-one {
-    top: 41.5vh;
+  #bar-three {
+    top: 66vh;
   }
 
   #mobile-clue {
     display: block;
   }
 
-  * {
-    font-size: 20px;
-  }
-
-  #bio {
-    margin: 9vw;
-  }
-
   .project-image {
     width: 75vw;
     left: 12.5vw;
   }
-  
+
   .project-list {
-    top: 7vh;
+    top: 5vh;
   }
 
   #enter-project {
-    height: 8vh;
-    width: 50vw;
-  }
+    bottom: 5vh;
+  };
 }

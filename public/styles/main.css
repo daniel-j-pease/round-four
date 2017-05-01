@@ -1,8 +1,75 @@
+/* 9, 38, 39, 48, 32,  */
+
+@font-face {
+  font-family: 'Miso';
+  src: url('../fonts/miso_regular_macroman/miso-regular-webfont.woff') format("truetype");
+}
+
+@font-face {
+  font-family: 'Print Clearly';
+  src: url('../fonts/Print-Clearly/PrintClearly.oft') format("truetype");
+}
+
+@font-face {
+  font-family: 'Maven Pro';
+  src: url('../fonts/maven-pro/MavenPro-Regular.ttf') format("truetype");
+}
+
 * {
   margin: 0;
   padding: 0;
   font-size: 16px;
 }
+
+.project-list,
+body,
+section,
+#project-info {
+  background-color: #82C2CC;
+  border-color: #82C2CC;
+}
+
+#contact-send,
+.showNav,
+nav,
+.bar,
+.bun,
+#enter-project,
+footer,
+.social {
+  background-color: #CC82A4;
+}
+
+h1,
+#project-close,
+.project-title,
+#first,
+#last,
+#title {
+  color: #7B84F3;
+  font-family: 'Miso';
+}
+
+.navClicked {
+  background-color: #7B84F3;
+}
+
+.project-list,
+li,
+#bio,
+#mobile-clue {
+  color: #338B99;
+  font-family: 'Maven Pro';
+}
+
+.showNav,
+nav,
+#contact-send,
+#enter-project {
+  color: #BCFFE3
+}
+
+
 
 #hamburger {
   height: 10vh;
@@ -21,7 +88,6 @@
 
 .bun {
   align-self: center;
-  background-color: #F8B195;
   display: block;
   height: 4px;
   margin-bottom: 7px;
@@ -30,14 +96,14 @@
 }
 
 nav {
-  background-color: #F8B195;
-  color: #355C7D;
+  border-radius: 5px;
   margin-right: 5vw;
   margin-top: 11vh;
   overflow: hidden;
   position: fixed;
   right: 0;
   z-index: 2;
+  opacity: .7;
 
   max-height: 0px;
   transition: max-height 0.5s ease-out 0s;
@@ -48,15 +114,9 @@ nav {
   transition: max-height 0.5s ease-out 0s;
 }
 
-.navClicked {
-  background-color: #fafafa;
-  color: #002e63;
-}
-
 nav > div {
   font-size: 1em;
-  line-height: 35px;
-  outline: 1px solid #6C5B7B;
+  line-height: 40px;
   outline-offset: -1px;
   text-align: center;
   width: 20vw;
@@ -64,47 +124,45 @@ nav > div {
 
 .name {
   position: absolute;
-  font-size: 4.236em;
-  line-height: 15vh;
-  /*font-family: 'Expletus Sans', cursive;*/
+  font-size: 6.354em;
+  line-height: 1;
 }
 
 #first {
-  top:37vh;
-  right: 10vw;
+  top: 25vh;
+  right: 15vw;
 }
 
 #last {
-  top:43vh;
-  left: 10vw;
+  top: 40vh;
+  left: 15vw;
 }
 
 #title {
-  font-size: 1.333em;
+  font-size: 2em;
   text-align: center;
-  top: 59vh;
+  top: 60vh;
   position: absolute;
 }
 
 .bar {
-  background-color: #F67280;
   height: 1vh;
   position: absolute;
   width: 50vw;
 }
 
 #bar-one {
-  top: 43.5vh;
+  top: 33.5vh;
   left: 10vw;
 }
 
 #bar-two {
-  top: 50.5vh;
+  top: 48.5vh;
   right: 10vw;
 }
 
 #bar-three {
-	top: 64vh;
+	top: 65vh;
 	left: 25vw;
 }
 
@@ -123,8 +181,6 @@ nav > div {
 }
 
 h1 {
-  color: #F8B195;
-  /*font-family: 'Expletus Sans', cursive;*/
   font-size: 2.618em;
   text-align: center;
   position: relative;
@@ -137,7 +193,6 @@ h1 {
 }
 
 #bio {
-  /*font-family: 'Raleway', sans-serif;*/
   font-size: 1em;
   position: relative;
   top: 20vh;
@@ -149,8 +204,6 @@ h1 {
 }
 
 #mobile-clue {
-  color: red;
-  /*font-family: 'Raleway', sans-serif;*/
   font-size: 1em;
   position: relative;
   text-align: center;
@@ -189,7 +242,6 @@ h1 {
 .project-list {
 	list-style-type: georgian;
 	margin: 0 3vw 0vw 10vw;
-	color: red;
 	position: absolute;
 }
 
@@ -205,10 +257,8 @@ ul > li {
   top: 0;
 	height: 75vh;
 	width: 80vw;
-  border-top: 15vh solid;
-  border-left: 10vw solid;
-  border-right: 10vw solid;
-  border-bottom: 15vh solid;
+  border-style: solid;
+  border-width: 15vh 10vw 15vh 10vw;
 }
 
 .hidden {
@@ -219,7 +269,7 @@ ul > li {
   -webkit-transition: opacity .3s ease-in-out;
 }
 
-.showInfo {
+.show-info {
   display: fixed;
 
 	opacity: 1;
@@ -235,21 +285,19 @@ ul > li {
 	line-height: 8vh;
 	left: calc(80vw - 8vh);
 	width: 8vh;
-	color: #fafafa;
 	text-align: center;
   z-index: 1;
 }
 
 #enter-project {
-  background-color: red;
-  bottom: 3vh;
   border-radius: 25px;
   border: none;
   height: 8vw;
-  left: 20vw;
+  left: 15vw;
   margin-bottom: 3vh;
   position: absolute;
-  width: 40vw;
+  width: 50vw;
+  bottom: 15vh;
 }
 
 input,
@@ -257,7 +305,6 @@ textarea {
   display: block;
   border: none;
   border-radius: 10px;
-  /*font-family: 'Raleway', sans-serif;*/
   font-size: 1em;
   position: relative;
 
@@ -269,9 +316,7 @@ textarea {
 }
 
 #contact-header {
-  color: #6C5B7B;
   display: block;
-  /*font-family: 'Raleway', sans-serif;*/
   position: relative;
   text-align: center;
   top: 15vh;
@@ -299,8 +344,6 @@ textarea {
 }
 
 #contact-send {
-  background-color: #355C7D;
-  color: #F8B195;
   left: 42.5vw;
   line-height: 5vh;
   top: 28vh;
@@ -308,14 +351,12 @@ textarea {
 }
 
 footer {
-  background-color: #355C7D;
   height: 30vh;
   width: 100vw;
 }
 
 .social {
   /*the position of the top of the icon is equal to half the footer's top position minus half the height of the icon*/
-  background-color: #355C7D;
   background-size: 100% 100%;
   border-radius: 50px;
   height: 70px;
