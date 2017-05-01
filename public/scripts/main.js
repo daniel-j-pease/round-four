@@ -1,6 +1,10 @@
 ('use strict');
 
-window.onload = () => {
+console.log(
+  'Hello! Thanks for visiting my site. Drop me a line and let me know what you think!'
+);
+
+window.onload = function() {
   // declare node variables (alphebetical unless part of numbered set)
   const about = document.querySelector('#about');
   const aboutHeader = document.querySelector('#about-header');
@@ -69,7 +73,7 @@ window.onload = () => {
 
   // 500ms after hiding the nav, remove highlight from nav items
   function clearColor(ele) {
-    let highlight = setTimeout(() => {
+    const highlight = setTimeout(function() {
       navHome.className = '';
       navAbout.className = '';
       navProjects.className = '';
@@ -81,7 +85,7 @@ window.onload = () => {
   function scrollTo(target, duration) {
     const distance = target - document.body.scrollTop;
     const perTick = distance / duration * 10;
-    const scroller = setInterval(() => {
+    const scroller = setInterval(function() {
       if (duration <= 0 || document.body.scrollTop === target) {
         clearInterval(scroller);
       } else {
@@ -99,7 +103,6 @@ window.onload = () => {
         body.scrollTop = 0;
         break;
       case 'About':
-        console.log(aboutHeight);
         body.scrollTop = aboutHeight;
         break;
       case 'Projects':
@@ -112,8 +115,6 @@ window.onload = () => {
   }
 
   function handleProjectClick(e) {
-    let mobile = document.querySelectorAll('[data="mobile"]')[0];
-
     //hide all project containers, project header, and mobile-clue
     projectOne.setAttribute('class', 'project-container hidden');
     projectTwo.setAttribute('class', 'project-container hidden');
@@ -132,17 +133,17 @@ window.onload = () => {
     contactMessage.setAttribute('class', 'hidden');
 
     // reveal info div with relevant info list
-    if (e.target.attributes[0].nodeValue == `project-one-image`) {
+    if (e.target.attributes[0].nodeValue == 'project-one-image') {
       projectInfo.setAttribute('class', 'show-info');
       projectOneList.setAttribute('class', 'project-list selected');
-    } else if (e.target.attributes[0].nodeValue == `project-two-image`) {
+    } else if (e.target.attributes[0].nodeValue == 'project-two-image') {
       projectInfo.setAttribute('class', 'show-info');
       projectTwoList.setAttribute('class', 'project-list selected');
-    } else if (e.target.attributes[0].nodeValue == `project-three-image`) {
+    } else if (e.target.attributes[0].nodeValue == 'project-three-image') {
       projectInfo.setAttribute('class', 'show-info');
       projectThreeList.setAttribute('class', 'project-list selected');
-      enterProject.innerHTML = `Ask for an in-person demo!`;
-    } else if (e.target.attributes[0].nodeValue == `project-four-image`) {
+      enterProject.innerHTML = 'Ask for an in-person demo!';
+    } else if (e.target.attributes[0].nodeValue == 'project-four-image') {
       projectInfo.setAttribute('class', 'show-info');
       projectFourList.setAttribute('class', 'project-list selected');
     }
@@ -171,132 +172,54 @@ window.onload = () => {
     enterProject.innerHTML = 'Show me the project!';
   }
 
+  // if esc is pressed, close project info div and unhide everything else
+  function escProject(e) {
+    if (e.which === 27) {
+      handleProjectClose();
+    }
+  }
+
   // set bar width to cover distance between beginning of opposite span
   function moveBars() {
-    let widthOne =
+    const widthOne =
       first.getBoundingClientRect().left -
       last.getBoundingClientRect().left -
       window.innerWidth / 55;
-    let widthTwo =
+    const widthTwo =
       first.getBoundingClientRect().right -
       last.getBoundingClientRect().right -
       window.innerWidth / 55;
-    let widthThree =
+    const widthThree =
       title.getBoundingClientRect().right - title.getBoundingClientRect().left;
 
-    let leftOne = last.getBoundingClientRect().left;
-    let rightTwo = window.innerWidth - first.getBoundingClientRect().right;
-    let leftThree = window.innerWidth / 2 - widthThree / 2;
+    const leftOne = last.getBoundingClientRect().left;
+    const rightTwo = window.innerWidth - first.getBoundingClientRect().right;
+    const leftThree = window.innerWidth / 2 - widthThree / 2;
 
-    let barOneTop =
+    const barOneTop =
       (first.getBoundingClientRect().bottom -
         first.getBoundingClientRect().top) /
         2 +
       first.getBoundingClientRect().top;
 
-    let barTwoTop =
+    const barTwoTop =
       (last.getBoundingClientRect().bottom - last.getBoundingClientRect().top) /
         2 +
       last.getBoundingClientRect().top;
 
-    barOne.style.width = `${widthOne}px`;
-    barTwo.style.width = `${widthTwo}px`;
-    barThree.style.width = `${widthThree}px`;
-    barOne.style.top = `${barOneTop}px`;
-    barTwo.style.top = `${barTwoTop}px`;
+    barOne.style.width = widthOne + 'px';
+    barTwo.style.width = widthTwo + 'px';
+    barThree.style.width = widthThree + 'px';
+    barOne.style.top = barOneTop + 'px';
+    barTwo.style.top = barTwoTop + 'px';
 
-    barOne.style.left = `${leftOne}px`;
-    barTwo.style.right = `${rightTwo}px`;
-    title.style.left = `${leftThree}px`;
-    barThree.style.left = `${leftThree}px`;
+    barOne.style.left = leftOne + 'px';
+    barTwo.style.right = rightTwo + 'px';
+    title.style.left = leftThree + 'px';
+    barThree.style.left = leftThree + 'px';
   }
 
-  // unfinished; randomize color pallet
-  function colorizer() {
-    // array of pallet object names
-    const pallets = ['mountain', 'meadow', 'cave', 'dusk'];
-
-    // object of color pallet objects
-    const colors = {
-      mountain: {
-        background: 'lightblue',
-        barsHeaders: 'green',
-        text: 'blue',
-        footer: 'green',
-        welcome: 'green'
-      },
-      meadow: {
-        background: '#da7d2d',
-        barsHeaders: 'yellow',
-        text: 'orange',
-        footer: 'yellow',
-        welcome: 'yellow'
-      },
-      cave: {
-        background: '#fadfad',
-        barsHeaders: 'pink',
-        text: 'yellow',
-        footer: 'pink',
-        welcome: 'pink'
-      },
-      dusk: {
-        background: 'green',
-        barsHeaders: 'purple',
-        text: 'palegoldenrod',
-        footer: 'orange',
-        welcome: 'purple'
-      }
-    };
-
-    // chose random index of pallet name array
-    let picker = Math.floor(Math.random() * pallets.length);
-
-    // set overall background color to given pallet's background color
-    welcome.style.backgroundColor = colors[pallets[picker]].background;
-    about.style.backgroundColor = colors[pallets[picker]].background;
-    portfolio.style.backgroundColor = colors[pallets[picker]].background;
-    contact.style.backgroundColor = colors[pallets[picker]].background;
-    body.style.backgroundColor = colors[pallets[picker]].background;
-    projectInfo.style.backgroundColor = colors[pallets[picker]].background;
-    projectInfo.style.borderColor = colors[pallets[picker]].background;
-    projectClose.style.backgroundColor = colors[pallets[picker]].background;
-
-    // set navs, bars, headers to given pallet's barsHeader color
-    nav.style.backgroundColor = colors[pallets[picker]].barsHeaders;
-    contactHeader.style.color = colors[pallets[picker]].barsHeaders;
-    aboutHeader.style.color = colors[pallets[picker]].barsHeaders;
-    projectHeader.style.color = colors[pallets[picker]].barsHeaders;
-    bun1.style.backgroundColor = colors[pallets[picker]].barsHeaders;
-    bun2.style.backgroundColor = colors[pallets[picker]].barsHeaders;
-    bun3.style.backgroundColor = colors[pallets[picker]].barsHeaders;
-    barOne.style.backgroundColor = colors[pallets[picker]].barsHeaders;
-    barTwo.style.backgroundColor = colors[pallets[picker]].barsHeaders;
-    barThree.style.backgroundColor = colors[pallets[picker]].barsHeaders;
-
-    // set text elements to given pallet's text color
-    projectOneList.style.color = colors[pallets[picker]].text;
-    projectTwoList.style.color = colors[pallets[picker]].text;
-    projectThreeList.style.color = colors[pallets[picker]].text;
-    projectFourList.style.color = colors[pallets[picker]].text;
-    contactSend.style.color = colors[pallets[picker]].text;
-    nav.style.color = colors[pallets[picker]].text;
-    bio.style.color = colors[pallets[picker]].text;
-    first.style.color = colors[pallets[picker]].text;
-    last.style.color = colors[pallets[picker]].text;
-    mobileClue.style.color = colors[pallets[picker]].text;
-    title.style.color = colors[pallets[picker]].text;
-    enterProject.style.color = colors[pallets[picker]].text;
-
-    // set footer elements given pallet's footer color
-    contactSend.style.backgroundColor = colors[pallets[picker]].footer;
-    enterProject.style.backgroundColor = colors[pallets[picker]].footer;
-    projectClose.style.color = colors[pallets[picker]].footer;
-    footer.style.backgroundColor = colors[pallets[picker]].footer;
-    github.style.backgroundColor = colors[pallets[picker]].footer;
-    linkedin.style.backgroundColor = colors[pallets[picker]].footer;
-    twitter.style.backgroundColor = colors[pallets[picker]].footer;
-  }
-
+  // opens respective social media site on click
   function handleSocialClick(e) {
     if (e.target.id === 'twitter') {
       window.open('https://twitter.com/realdanpease', '_blank');
@@ -307,8 +230,9 @@ window.onload = () => {
     }
   }
 
+  // opens respective project on click
   function handleEnterProjectClick(e) {
-    let selected = document.querySelectorAll('.selected')[0].firstElementChild
+    const selected = document.querySelectorAll('.selected')[0].firstElementChild
       .innerHTML;
     switch (selected) {
       case 'BustleBoy':
@@ -322,12 +246,6 @@ window.onload = () => {
       case 'My Two Cents':
         window.open('http://www.mytwocents.nyc/', '_blank');
         break;
-    }
-  }
-
-  function escProject(e) {
-    if (e.which === 27) {
-      handleProjectClose();
     }
   }
 
@@ -350,32 +268,10 @@ window.onload = () => {
 
   window.addEventListener('orientationchange', checkOrientation);
 
-  // invoke moveBars and colorizer to dynamically set pallet and bar width
+  // invoke moveBars to dynamically set pallet and bar width
   moveBars();
-  // colorizer();
 
   function checkOrientation() {
     moveBars();
   }
-
-  function testFunctions() {
-    const testHeight1 =
-      first.getBoundingClientRect().bottom - first.getBoundingClientRect().top;
-    const testHeight2 =
-      last.getBoundingClientRect().bottom - last.getBoundingClientRect().top;
-
-    console.log(
-      'testHeight1',
-      testHeight1 / viewHeight,
-      first.getBoundingClientRect().top / viewHeight
-    );
-    console.log(
-      'testHeight2',
-      testHeight2 / viewHeight,
-      last.getBoundingClientRect().top / viewHeight
-    );
-    console.log(first);
-  }
-
-  testFunctions();
 };
