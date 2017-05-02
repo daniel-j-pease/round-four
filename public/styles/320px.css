@@ -1,13 +1,5 @@
 @media (min-width:320px) and (max-width:479px){
 
-  * {
-    /*font-size: 16px;*/
-  }
-
-  .threeTwenty {
-    display: block;
-  }
-
   nav > div {
     width: 20vw;
   }

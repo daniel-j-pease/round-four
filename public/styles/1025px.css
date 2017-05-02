@@ -1,9 +1,5 @@
 @media (min-width:1025px) and (max-width:1280px) {
 
-  .tenTwentyFive {
-    display: block;
-  }
-
   * {
     font-size: 32px;
   }
@@ -21,7 +17,7 @@
   }
 
   #bar-three {
-    top: 76.5vh;
+    top: 78.5vh;
   }
 
   .project-list {
@@ -52,20 +48,20 @@
   }
 
   #enter-project {
-    bottom: 5vh;
+    bottom: 0vh;
   }
 
   #contact-header {
-    top: 10vh;
+    top: 5vh;
   }
 
   #contact-email,
   #contact-name {
-    top: 15vh;
+    top: 10vh;
   }
 
   #contact-message {
-    top: 19vh;
+    top: 14vh;
   }
 
   #contact-email,
@@ -75,7 +71,7 @@
   }
 
   #contact-send {
-    top: 23vh;
+    top: 18vh;
   }
 
   #linkedin {

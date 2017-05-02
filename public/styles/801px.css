@@ -1,9 +1,5 @@
 @media (min-width:801px) and (max-width:1024px) {
 
-  .eightOhOne {
-    display: block;
-  }
-
   * {
     font-size: 28px;
   }

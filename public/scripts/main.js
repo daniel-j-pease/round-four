@@ -169,7 +169,7 @@ window.onload = function() {
     contactMessage.setAttribute('class', '');
     hamburger.setAttribute('class', '');
     hamburger.addEventListener('click', handleHamburgerClick);
-    enterProject.innerHTML = 'Show me the project!';
+    enterProject.innerHTML = 'Show me!';
   }
 
   // if esc is pressed, close project info div and unhide everything else
@@ -249,6 +249,11 @@ window.onload = function() {
     }
   }
 
+  // adjust bar positions and length when orientatin changes
+  function checkOrientation() {
+    moveBars();
+  }
+
   // assign all event listners
   hamburger.addEventListener('click', handleHamburgerClick);
   nav.addEventListener('click', handleNavClick);
@@ -270,8 +275,4 @@ window.onload = function() {
 
   // invoke moveBars to dynamically set pallet and bar width
   moveBars();
-
-  function checkOrientation() {
-    moveBars();
-  }
 };
