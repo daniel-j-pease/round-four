@@ -271,8 +271,6 @@ window.onload = function() {
   github.addEventListener('click', handleSocialClick);
   linkedin.addEventListener('click', handleSocialClick);
 
-  window.addEventListener('orientationchange', checkOrientation);
-
   // invoke moveBars to dynamically set pallet and bar width
   moveBars();
 };
