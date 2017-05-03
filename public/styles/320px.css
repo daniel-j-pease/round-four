@@ -8,14 +8,11 @@
     display: block;
   }
 
-
   .project-list {
     top: 7vh;
   }
 
   #enter-project {
     bottom: 0;
-    height: 8vh;
-    width: 50vw;
   }
 }

@@ -69,8 +69,6 @@ nav,
   color: #BCFFE3
 }
 
-
-
 #hamburger {
   height: 10vh;
   position: fixed;
@@ -189,13 +187,13 @@ h1 {
 }
 
 #about-header {
-  top: 20vh;
+  top: 15vh;
 }
 
 #bio {
   font-size: 1em;
   position: relative;
-  top: 20vh;
+  top: 15vh;
   margin: 7vw 15vw;
 }
 
@@ -378,15 +376,4 @@ footer {
 
 #twitter {
   background-image: url('../assets/twitter.png');
-}
-
-.tiny,
-.threeTwenty,
-.fourEighty,
-.sixHundred,
-.eightOhOne,
-.tenTwentyFive,
-.twelveEightyOne {
-  display: none;
-  position: fixed;
 }
