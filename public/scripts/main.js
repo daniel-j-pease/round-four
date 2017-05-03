@@ -249,17 +249,11 @@ window.onload = function() {
     }
   }
 
-  // adjust bar positions and length when orientatin changes
-  function checkOrientation() {
-    moveBars();
-  }
-
   // assign all event listners
   hamburger.addEventListener('click', handleHamburgerClick);
   nav.addEventListener('click', handleNavClick);
   body.addEventListener('click', hideNav);
 
-  window.addEventListener('resize', moveBars);
   window.addEventListener('keydown', escProject);
   projectOne.addEventListener('click', handleProjectClick);
   projectTwo.addEventListener('click', handleProjectClick);
