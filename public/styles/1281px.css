@@ -24,11 +24,12 @@
   }
 
   #about-header {
-    top: 10vh;
+    top: 7vh;
   }
 
   #bio {
-    top: 5vh
+    top: 10vh;
+    margin:0vw 20vw;
   }
 
   ul > li,
@@ -41,16 +42,16 @@
   }
 
   #contact-header {
-    top: 10vh;
+    top: 7vh;
   }
 
   #contact-email,
   #contact-name {
-    top: 15vh;
+    top: 12vh;
   }
 
   #contact-message {
-    top: 19vh;
+    top: 16vh;
   }
 
   #contact-email,
@@ -61,7 +62,7 @@
 
   #contact-send {
     font-size: 25px;
-    top: 21vh;
+    top: 18vh;
   }
 
   #linkedin {
